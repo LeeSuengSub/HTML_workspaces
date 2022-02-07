@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+         margin: auto;
+         box-shadow: 0 3px 7px grey;
+         background-color: white;
+     }
+ 
+     table:hover {
+         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+     }
+ 
+     tr {
+         border: 1px solid #444444;
+     }
+ 
+     tr:nth-child(even) {
+         background-color: #eaeaeb;
+     }
+ 
+     thead {
+         box-shadow: 0 1px 5px grey;
+     }
+ 
+     th {
+         padding: 1rem 2rem;
+         letter-spacing: 0.4rem;
+         font-size: 1.2rem;
+         font-weight: 900;
+         text-align: center;
+     }
+ 
+     td {
+         padding: 1rem 2rem;
+         text-align: center;
+     }
+     </style>
+</head>
+<body>
+    <h3>Form</h3>
+<form action="웹서버주소">
+아이디 : <input type="text">
+비밀번호 : <input type="password">
+회원 이메일 : <input type="email">
+<input type="submit">
+</form>
+
+<h3>table</h3>
+<table>
+    <thead>
+        <tr>
+            <th>1교시</th>
+            <th>2교시</th>
+            <th>3교시</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">자습</td>
+            <td>이론</td>
+            <td>실습</td>
+        </tr>
+        <tr>
+            <td>실습</td>
+            <td>휴식</td>
+        </tr>
+        <tr>
+            <td colspan="3">실습</td>
+        </tr>
+        <tr>
+            <td colspan="3">휴식</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</body>
+</html>
