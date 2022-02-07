@@ -44,40 +44,69 @@
 </head>
 <body>
     <h3>Form tag</h3>
-    <form action="웹서버를 적어라">
-        이름 : <input type="text">
-        나이 : <input type="number">
-        성별 : <input type="text">
-        전화번호 : <input type="number">
+    <form action="웹서버 주소">
+        아이디 : <input type="text">
+        비밀번호 : <input type="password">
+        화원 이메일 : <input type="email">
         <input type="submit">
     </form>
 
 <h3>연관 검색어 만들기</h3>
 
-<label for="롯데리아"></label>
-<input id="롯데리아" type="text" list="햄버거 종류">
-<datalist id="햄버거 종류">
-    <option value="새우버거"></option>
+<label for="롯데리아">롯데리아</label>
+<input id="롯데리아" type="text" list="햄버거종류">
+<datalist id="햄버거종류">
     <option value="데리버거"></option>
+    <option value="불고기버거"></option>
     <option value="핫크리스피버거"></option>
-    <option value="티랙스버스"></option>
-    <option value="와규버거"></option>
-    <option value="아재버거"></option>
-    <option value="한우버거"></option>
+    <option value="티렉스버거"></option>
 </datalist>
-
 
 <h3>detail Tag</h3>
 
 <details>
-<summary>먹보 특징</summary>
-<span>늘 배고파한다.</span>
+    <summary>먹보</summary>
+    <pre>
+        <span>항상 배고파한다.</span>
+        <span>늘 무언가를 먹고있다.</span>
+    </pre>
 </details>
 
 <h3>progress Tag</h3>
 
 <progress></progress>
 
-<progress value="10" min = "0" max="100"></progress>
+<progress value="5" min="0" max="100"></progress>
+
+<h3>table TAG</h3>
+<table>
+    <thead>
+        <tr>
+            <th>월요일</th>
+            <th>화요일</th>
+            <th>수요일</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>배틀그라운드</td>
+            <td>카운터 스트라이커</td>
+            <td>배틀필드</td>
+        </tr>
+        <tr>
+            <td>크로스 파이어</td>
+            <td>오버워치</td>
+            <td>팀 포트리스</td>
+        </tr>
+        <tr>
+            <td>포트나이트</td>
+            <td>타르코프</td>
+            <td>서든어택</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
 </body>
 </html>
