@@ -51,11 +51,62 @@
 <input type="submit">
 </form>
 
-<h3>Table</h3>
+
+<h3>복습</h3>
+<a href="링크">주소지 입력</a>
+아이디 : <input type="text" placeholder="아이디 입력">
+비밀번호 : <input type="password" placeholder="비밀번호 입력" maxlength="6">
+이메일 : <input type="email" placeholder="이메일 입력">
+
+<input type="file">
+<input type="date">
+
+<h3>선택 상자 만들기</h3>
+<h4><input type="checkbox" id="1차 접종" checked>
+    <label for="1차 접종">1차 접종</label>
+</h4>
+<h4><input type="checkbox" id="2차 접종" checked>
+<label for="2차 접종">2차 접종</label> </h4>
+<h4><input type="checkbox" id="부스터샷" checked>
+<label for="부스터샷">부스터샷</label></h4>
+
+<h3>버튼 만들기</h3>
+<input type="button" value="클릭">
+<button>클릭</button>
+
+<h3>선택 상자 만들기</h3>
+<select name="" id="">
+    <option value="">---옵션을 선택하세요---</option>
+    <option value="중국">코로나</option>
+    <option value="a형">독감</option>
+    <option value="중동">메르스</option>
+</select>
+<input type="text" id="User_id" name="User_id" value="박멸" readonly>
+
+<details>
+    <summary>백신은</summary>
+    <span>너무 아프다.</span>
+</details>
+
+<progress></progress>
+
+<progress value="56" min = "0" max="100"></progress>
+
+<label for="game">게임을 추천해주세요</label>
+<input id="game" type="text" list="game-list">
+<datalist id="game-list">
+    <option value="타르코프"></option>
+    <option value="배틀필드"></option>
+    <option value="콜오브듀티"></option>
+    <option value="배틀그라운드"></option>
+    <option value="서든 어택"></option>
+</datalist>
+
+<h2>Table</h2>
 <table>
     <thead>
         <tr>
-            <th>시간</th>
+            <th></th>
             <th>월요일</th>
             <th>화요일</th>
             <th>수요일</th>
@@ -63,29 +114,26 @@
     </thead>
     <tbody>
         <tr>
-            <td>09:00~12:50</td>
-            <td colspan="3">오전 수업</td>
+            <td>09:00~09:50</td>
+            <td colspan="3">HTML</td>
         </tr>
         <tr>
-            <td>12:50~13:40</td>
-            <td colspan="3">점심시간</td>
+            <td>10:00~10:50</td>
+            <td colspan="3">CSS</td>
         </tr>
         <tr>
-            <td>13:40~16:30</td>
-            <td colspan="3">오후 수업</td>
-        </tr>
-        <tr>
-        <td>16:30~</td>
-        <td rowspan="2">자유시간</td>
-        <td>복습시간</td>
-        <td>자습시간</td>
-        </tr>
-        <tr>
-            <td>18:00</td>
-            <td colspan="2">휴식 시간</td>
+            <td>11:00~11:50</td>
+            <td colspan="3">HTML&CSS</td>
         </tr>
     </tbody>
 </table>
 
+<h3>Form</h3>
+<form action="웹주소 입력">
+아이디 : <input type="text" placeholder="아이디 입력">
+비밀번호 : <input type="password" placeholder="비밀번호 입력">
+이메일 : <input type="email" placeholder="email...">
+<input type="submit">
+</form>
 </body>
 </html>
