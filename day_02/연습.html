@@ -43,65 +43,49 @@
      </style>
 </head>
 <body>
-    <h3>Form</h3>
-<form action="웹서버주소">
+<h3>Form</h3>
+<form action="웹서버 주소">
 아이디 : <input type="text">
 비밀번호 : <input type="password">
-회원 이메일 : <input type="email">
+이메일 : <input type="email">
 <input type="submit">
 </form>
 
-<h3>table</h3>
+<h3>Table</h3>
 <table>
     <thead>
         <tr>
-            <th>1교시</th>
-            <th>2교시</th>
-            <th>3교시</th>
+            <th>시간</th>
+            <th>월요일</th>
+            <th>화요일</th>
+            <th>수요일</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2">자습</td>
-            <td>이론</td>
-            <td>실습</td>
+            <td>09:00~12:50</td>
+            <td colspan="3">오전 수업</td>
         </tr>
         <tr>
-            <td>실습</td>
-            <td>휴식</td>
+            <td>12:50~13:40</td>
+            <td colspan="3">점심시간</td>
         </tr>
         <tr>
-            <td colspan="3">실습</td>
+            <td>13:40~16:30</td>
+            <td colspan="3">오후 수업</td>
         </tr>
         <tr>
-            <td colspan="3">휴식</td>
+        <td>16:30~</td>
+        <td rowspan="2">자유시간</td>
+        <td>복습시간</td>
+        <td>자습시간</td>
         </tr>
-
-    </tbody>
-
-</table>
-
-<h3>table 순서</h3>
-<table>
-    <thead>
         <tr>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
+            <td>18:00</td>
+            <td colspan="2">휴식 시간</td>
         </tr>
     </tbody>
 </table>
-
-<H3>form</H3>
-<form action="웹서버주소">
-    아이디 : <input type="text">
-    비밀번호 : <input type="password" maxlength="6">
-    이메일 : <input type="email">
-    <input type="submit">
-</form>
 
 </body>
 </html>
