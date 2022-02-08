@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        /* 배경화면 CSS */
+        .background{
+            width: 100%;
+            height: 100vh;
+            /* opacity는 투명도 조절 */
+            /* opacity: 0.5; (0~1)*/
+            /* CSS color : red, #000000 regba(0,8,51,0.9) */
+            background-image: linear-gradient(
+                rgba(0,8,51,0.9),
+                #D5320A
+            ), url(background.jpg);
+            background-position: center;
+        }
+        /* 글씨 폰트 */
+        .background p{
+            text-align: center;
+            color: aqua;
+            font-size: 30px;
+            font-weight: 800;
+            /* solid: 두꺼운 선
+            dotted : 점선 */
+            border: dotted red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <p>안녕하세요 저는 오늘 순대국밥을 먹고 왔어요.</p>
+        </div>
+
+    </div>
+</body>
+</html>

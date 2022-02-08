@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .A{
+
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+        .B{
+            position: relative;
+            top: 0px;
+            left: 100px;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+        .C{
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            background-color: coral;
+            width: 100px;
+            height: 100px;
+        }
+        .D{
+            position: fixed;
+            width: 100px;
+            bottom: 100px;
+            right: 0px;
+            background-color: #0A0AD5;
+        }
+        body{
+            height: 200vh;
+        }
+        .mom{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+        }
+        .son{
+            position: absolute;
+            top: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="A">A 구역</div>
+    <div class="B">B 구역</div>
+    <div class="C">C 구역</div>
+    <div class="D">D 구역</div>
+
+    <div class="mom">부모
+        <div class="son">자식</div>
+    </div>
+
+
+
+</body>
+</html>
