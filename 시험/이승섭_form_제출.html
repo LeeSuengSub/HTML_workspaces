@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .contact-form {
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+        margin: 50px auto;
+        width: 350px;
+        text-align: center;
+      }
+      .contact-form h2 {
+        background-color: #efefef;
+        margin-top: 0;
+        padding: 10px;
+      }
+      .contact-form select {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+      .contact-form input {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+      .contact-form input[type=checkbox]  {
+        width: 10%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+      .contact-form textarea {
+        width: 90%;
+        margin: 5px auto;
+        padding: 10px;
+        height: 80px;
+      }
+      .submit-btn {
+        cursor: pointer;
+        width: 150px;
+        margin-left: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-form">
+      <h2>카페 메뉴</h2>
+      <form action="서버 주소" method="post">
+        <select name="" id="">
+          <option value="">--Please choose an menu--</option>
+          <option value="에스프레소">에스프레소</option>
+          <option value="아메리카노">아메리카노</option>
+          <option value="카페라테">카페라테</option>
+          <option value="카푸치노">카푸치노</option>
+        </select>
+        <input type="number" placeholder="수량" max="3" required/>
+        <input type="text" placeholder="회원이름 입력란..." disabled>
+        <input type="password" placeholder="회원 비밀번호 입력란...">
+        <input type="checkbox" id="광고수신 여부" checked>
+        <label for="광고수신 여부"> 광고수신 여부</label>
+        <input type="eamil" placeholder="이메일 입력란...">
+        <textarea name="message" placeholder="주문시 메모 입력란..."></textarea>
+        <input type="submit" value="주문">
+      </form>
+    </div>
+  </body>
+</html>
