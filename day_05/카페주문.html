@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(pexels-eberhard-grossgasteiger-1624438.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .container{
+            width: 350px;
+            height: auto;
+            background-color: white;
+            text-align: center;
+            margin: auto;
+            border: 3px solid salmon;
+        }
+        .select{
+            width: 300px;
+            height: 40px;
+            margin: 10px;
+        }
+        .수량{
+            width: 300px;
+            height: 40px;
+            margin: 10px;
+        }
+        .회원이름{
+            width: 300px;
+            height: 40px;
+            margin: 10px;
+        }
+        .비밀번호{
+            width: 300px;
+            height: 40px;
+            margin: 10px;
+        }
+        .광고여부{
+            width: auto;
+            margin: 10px;
+            
+        }
+        .이메일{
+            width: 300px;
+            height: 40px;
+            margin: 10px;
+        }
+        .메모장{
+            width: 300px;
+            height: 100px;
+            margin: 10px;
+        
+        }
+        .버튼{
+            cursor: pointer;
+            width: 300px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function doSucuss() {
+            alert('주문 완료')
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>카페 메뉴</h2>
+            <select class="select" name="" id="">
+                <option value="">Please choose an menu...</option>
+            </select>
+            <input class="수량" type="number" placeholder="수량...">
+            <input class="회원이름" type="text" placeholder="회원이름 입력란...">
+            <input class="비밀번호" type="password" placeholder="회원 비밀번호 입력란...">
+            <input class="광고여부" type="checkbox" value="광고수신 여부" checked>
+            <label for="광고수신 여부">광고수신 여부</label>
+            <input class="이메일" type="email" placeholder="이메일 입력란...">
+            <input class="메모장" type="text" placeholder="주문시 메모 입력란...">
+            <input class="버튼" type="button" value="주문" onclick="doSucuss()">
+       
+        </div>
+
+    </div>
+</body>
+</html>

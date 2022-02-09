@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(pexels-eberhard-grossgasteiger-1624438.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .container{
+            width: 350px;
+            height: auto;
+            background-color: white;
+            text-align: center;
+            margin: auto;
+            border: 3px dotted red;
+        }
+        .select{
+            width: 300px;
+            height: 30px;
+            margin: 10px;
+        }
+        .name{
+            width: 300px;
+            height: 30px;
+            margin: 10px;
+        }
+        .date{
+            color: yellowgreen
+        }
+        .in{
+            width: 300px;
+            height: 30px;
+            margin: 10px;
+        }
+        .out{
+            width: 300px;
+            height: 30px;
+            margin: 10px;
+        }
+        .checkbox{
+            color: yellowgreen;
+            margin: 10px;
+        }
+        .button{
+            cursor: pointer;
+            width: 300px;
+            height: 25px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function doSuccess() {
+            alert('예약완료')
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>예약</h2>
+        <form action="">
+        <select class="select" name="" id="">
+            <option value="">--선택사항--</option>
+        </select>
+        <input class="name" type="text" placeholder="예약자 이름">
+        <h3>숙박일</h3>
+        <label for="from"></label>
+        <input class="in" type="date">
+        <label for="to"></label>
+        <input class="out" type="date">
+        <input class="checkbox" type="checkbox">
+        <label for="당일치기">당일치기</label>
+        <input class="button" type="submit" value="예약하기" onclick="doSuccess()">
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
