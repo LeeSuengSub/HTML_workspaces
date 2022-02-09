@@ -1,0 +1,20 @@
+ /* 브라우저마다 달라서 초기 세팅 */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-form{
+    /* 위, 오른쪽, 아래, 왼쪽 */
+    /* padding: 10px; */
+    /* 위, 오른쪽&왼쪽, 아래 */
+    padding: 5px 10px 0;
+    border: 5px solid;
+    width: 200px;
+    height: 200px;
+}
+.login-form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
