@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .book-form{
+            width: 350px;
+            height: auto;
+            border: 1px solid #ced4ba;
+            margin: 10% auto 0;
+            padding: 10px 20px 10px;
+            border: solid blue;
+        }
+        .book-form input{
+            width: 100%;
+            height: auto;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        /* 버튼에 색깔 넣기 */
+        .book-form .true{
+            cursor: pointer;
+            border-color: aqua;
+            background-color: aqua;
+            color: blueviolet;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .book-form .false{
+            cursor: pointer;
+            border-color: blueviolet;
+            background-color: blueviolet;
+            color: aqua;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    </style>
+    <script>
+        // 자바스크립트 메소드
+        function doSucuss() {
+            alert("예약 완료!")
+        }
+        function doFail() {
+            alert('예약 취소!');
+        }
+    </script>
+</head>
+<body>
+    <div class="cotainer">
+        <div class="book-form">
+            <input type="text" placeholder="아이디를 입력하세요...">
+            <input class="true" type="button" value="예약 완료" onclick="doSucuss();">
+            <input class="false" type="button" value="예약 취소" onclick="doFail();">
+        </div>
+    </div>
+</body>
+</html>
