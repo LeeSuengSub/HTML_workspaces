@@ -19,10 +19,9 @@
         .container{
             width: 350px;
             height: auto;
-            background-color: white;
             text-align: center;
             margin: auto;
-            border: 3px dotted red;
+            border: 5px dotted yellowgreen;
         }
         .select{
             width: 300px;
@@ -48,14 +47,18 @@
             margin: 10px;
         }
         .checkbox{
-            color: yellowgreen;
             margin: 10px;
+        }
+        .checkbox-name{
+            color: aquamarine
         }
         .button{
             cursor: pointer;
             width: 300px;
             height: 25px;
             margin: 10px;
+            border-color: blueviolet;
+            background-color: blueviolet;
         }
     </style>
     <script>
@@ -78,7 +81,7 @@
         <label for="to"></label>
         <input class="out" type="date">
         <input class="checkbox" type="checkbox">
-        <label for="당일치기">당일치기</label>
+        <label class="checkbox-name" for="당일치기">당일치기</label>
         <input class="button" type="submit" value="예약하기" onclick="doSuccess()">
         </form>
     </div>
