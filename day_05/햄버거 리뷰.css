@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(topimage-classic-hamburger-2019m04-800x534-curiosa.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.site{
+    margin: 10px auto 0;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    opacity: 0.9;
+    background-color: white;
+}
+.brand{
+    width: 300px;
+    height: 30px;
+    margin: 5px auto 10px;
+}
+.select{
+    width: 80%;
+    height: 30px;
+}
+.name{
+    width: 300px;
+    height: 30px;
+    margin: 5px auto 5px;
+}
+.set{
+    margin: 10px auto 3px;
+}
+.review{
+    width: 400px;
+    height: 300px;
+    margin: 3px auto 5px;
+    word-break:break-all;
+}
+.star{
+    width: 30%;
+    height: 40px;
+    margin: 5px auto;
+}
+.submit{
+    cursor: pointer;
+    width: 200px;
+    height: 30px;
+    margin: 5px auto 5px;
+}
