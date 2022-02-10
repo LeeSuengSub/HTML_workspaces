@@ -10,13 +10,20 @@
         function tosucess() {
             alert('지원해주셔서 감사합니다.')
         }
+        function onlynumber() {
+            if ((event.keyCode < 48) || (event.keyCode > 57))
+            event.returnValue = false;
+        }
     </script>
 </head>
 <body>
     <div class="container">
         <div class="cafe">
-            <h3>입사 지원</h3>
+            <h1>입사 지원</h1>
             <form action="">
+
+                지원자 사진 : <input class="img" type="file">
+
                 <select name="" id="">
                     <option value="">--지원하고자 하는 업무를 선택해주세요--</option>
                     <option value="">Back-end 개발자</option>
@@ -38,11 +45,17 @@
 
                 <input class="name" type="text" placeholder="지원자 이름">
 
-                <input class="number" type="number" placeholder="지원자 핸드폰 번호">
-                
                 <input class="email" type="eamil" placeholder="email 입력란">
                 
                 <input class="sal" type="number" placeholder="희망 연봉 ex)2400">
+
+                <h4>핸드폰 번호</h4>
+
+                <div class="number">
+                    <input type="text" value="010" size="4" readonly>
+                    <input type="text" id="txtMobile2" size="4" maxlength="4" onkeypress="onlyNumber();" />
+                    <input type="text" id="txtMobile3" size="4" maxlength="4"/>
+                </div>
                 
                 <h3>선택사항</h3>
 

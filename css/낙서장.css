@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(pexels-pixabay-290275.jpg);
+    background-image: url(pexels-canva-studio-3194519.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -16,6 +16,10 @@ body{
     opacity: 0.9;
     border: 2px solid white;
     text-align: center;
+    border-radius: 10px;
+}
+.img{
+    border: 1px solid;
 }
 .cafe select{
     width: 300px;
@@ -33,8 +37,6 @@ body{
     margin: 5px auto 5px;
 }
 .cafe .number{
-    width: 300px;
-    height: 30px;
     margin: 5px auto 5px;
 }
 .time{
@@ -46,7 +48,7 @@ body{
 .email{
     width: 300px;
     height: 30px;
-    margin: 5px auto 0;
+    margin: 5px auto 5px;
 }
 .sal{
     width: 300px;
