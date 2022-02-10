@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="낙서장.css">
+    <script>
+        function tosucess() {
+            alert('지원해주셔서 감사합니다.')
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="cafe">
+            <h3>입사 지원</h3>
+            <form action="">
+                <select name="" id="">
+                    <option value="">--지원하고자 하는 업무를 선택해주세요--</option>
+                    <option value="">Back-end 개발자</option>
+                    <option value="">Front-end 개발자</option>
+                    <option value="">Back-end 시니어 개발자</option>
+                    <option value="">Front-end 시니어 개발자</option>
+                    <option value="">총괄 디렉터</option>
+                    </select>
+
+                    <input class="Languages" type="text" placeholder="다룰수 있는 언어 입력란">
+
+                    <select name="" id="">
+                        <option value="">신입</option>
+                        <option value="">~2년차</option>
+                        <option value="">~3년차</option>
+                        <option value="">~5년차</option>
+                        <option value="">~10년차</option>
+                    </select>
+
+                <input class="name" type="text" placeholder="지원자 이름">
+
+                <input class="number" type="number" placeholder="지원자 핸드폰 번호">
+                
+                <input class="email" type="eamil" placeholder="email 입력란">
+                
+                <input class="sal" type="number" placeholder="희망 연봉 ex)2400">
+                
+                <h3>선택사항</h3>
+
+                <input class="option" type="text" placeholder="github 주소">
+
+                <h3>수신동의</h3>
+               
+                <div class="time">    
+                    <input type="checkbox" value="수신 동의">
+                    <label for="수신 동의">sms</label>
+                    <input type="checkbox" value="우편">
+                    <label for="우편">우편</label>
+                    <input type="checkbox" value="email">
+                    <label for="email">email</label>
+                </div>
+                
+                <input class="button" type="submit" value="지원하기" onclick="tosucess()">
+
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
