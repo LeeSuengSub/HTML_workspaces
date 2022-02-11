@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="햄버거 리뷰.css">
+    <script>
+        function tosuccess() {
+            alert('리뷰해주셔서 감사합니다.')
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="http://127.0.0.1:5500/day_06/%ED%96%84%EB%B2%84%EA%B1%B0%20%EB%A6%AC%EB%B7%B0.html">리뷰 사이트</a>
+        </div>
+
+        <ul class="head">
+            <li><a href="">햄버거</a></li>
+            <li><a href="">프렌치프라이</a></li>
+            <li><a href="">음료</a></li>
+        </ul>
+        <div class="icon">
+            <p>  </p>
+        </div>
+    </header>
+
+        <div class="container">
+            <div class="site">
+            <h3>햄버거 리뷰</h3>
+            <form action="">
+                <select class="select" name="" id="">
+                    <option value="">브랜드선택</option>
+                    <option value="">-----------</option>
+                    <option value="맥도날드">맥도날드</option>
+                    <option value="맘스터치">맘스터치</option>
+                    <option value="롯데리아">롯데리아</option>
+                    <option value="버거킹">버거킹</option>
+                </select>
+            
+            <br> 햄버거이름: <input class="name" type="text" placeholder="ex)불고기버거">
+
+            <div class="set">
+                <input type="checkbox" value="단품">
+                <label for="단품">단품</label>
+                <input type="checkbox" value="세트">
+                <label for="세트">세트</label>
+            </div>
+            <h4>리뷰 작성란</h4>
+            <br><input class="review" type="text" onkeypress="if(event.keyCode==13){return false;}" placeholder="자유롭게 작성바랍니다.">
+
+                <h3>평점</h3>
+                <select class="star" name="" id="">
+                    <option value="">---</option>
+                    <option value="">0.5</option>
+                    <option value="">1</option>
+                    <option value="">1.5</option>
+                    <option value="">2</option>
+                    <option value="">2.5</option>
+                    <option value="">3</option>
+                    <option value="">3.5</option>
+                    <option value="">4</option>
+                    <option value="">4.5</option>
+                    <option value="">5</option>
+                </select>
+
+            <br> <input class="submit" type="submit" value="제출하기" onclick="tosuccess()">
+        </form>
+        <div class="ment">
+            <p>리뷰를 작성해 주신분들께는 추첨을 통해 포켓몬 카드를 드립니다.</p>
+        </div>
+        <div class="card">
+            <img src="파이리.gif" alt="파이리">
+            <div class="text-wrap">
+                <h2>파이리</h2>
+                <p>도룡뇽 포켓몬. 타입은 불꽃이다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="꼬북이.jpg" alt="꼬북이">
+            <div class="text-wrap">
+                <h2>꼬북이</h2>
+                <p>아기거북 포켓몬. 타입은 물이다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="이상해씨.jpg" alt="이상해씨">
+            <div class="text-wrap">
+                <h2>이상해씨</h2>
+                <p>씨앗 포켓몬. 타입은 풀/독이다.</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="f-logo">
+            <p> </p>
+        </div>
+        <ul class="f-list">
+            <li><a href="">Donate</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Github</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
