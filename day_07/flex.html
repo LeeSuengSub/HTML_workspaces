@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex-container{
+            height: 100vh;
+            align-items: center;
+            display: flex;
+            /* justify-content : item 간격 조절(space-around, space-between) */
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        /* item 전역 변수 */
+      .item{
+            width: 100px;
+            height: 70px;
+            border: 1px solid black;
+        }
+      .item1 {
+        background-color: #ef9a9a;
+      }
+      .item2 {
+        background-color: #f48fb1;
+      }
+      .item3 {
+        background-color: #ce93d8;
+      }
+      .item4 {
+        background-color: #b39ddb;
+      }
+      .item5 {
+        background-color: #90caf9;
+      }
+      .item6 {
+        background-color: #a5d6a7;
+      }
+      .item7 {
+        background-color: #e6ee9c;
+      }
+      .item8 {
+        background-color: #fff59d;
+      }
+      .item9 {
+        background-color: #ffcc80;
+      }
+      .item10 {
+        background-color: #D52C0F;
+ 	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- flex-container flex 배열 됨 -->
+        <div class="flex-container">
+            <!--css for문: div.item${$}*10 -->
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+            <div class="item item6">6</div>
+            <div class="item item7">7</div>
+            <div class="item item8">8</div>
+            <div class="item item9">9</div>
+            <div class="item item10">10</div>
+
+        </div>
+    </div>
+</body>
+</html>
