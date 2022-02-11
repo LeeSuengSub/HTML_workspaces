@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: 50px auto 0;
+            background-color: beige;
+        }
+        .card{
+            display: inline-block;
+            margin: 45px;
+            border-radius: 8px;
+            height: 400px;
+            width: 270px;
+            /* overflow: 컨텐츠가 너무 커서 요소내에 모두 보여주기 힘들 때 사용. */
+            overflow: hidden;
+            box-shadow: 0 20px 35px black;
+            padding: 5px;
+            transform: scale(1);
+            transition: 2s;
+            background-color: #d0834d;
+        }
+        .card:hover{
+            cursor: pointer;
+            transform: scale(1.25);
+        }
+        .card img{
+            width: 260px;
+            height: 260px;
+        }
+        .text-wrap{
+            padding: 15px;
+            text-align: left;
+        }
+        .text-wrap h1{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .text-wrap p{
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Ctrl+스페이스바를 누르면 같은 경로에 있는 파일들이 나온다. -->
+            <img src="파이리.gif" alt="파이리">
+            <div class="text-wrap">
+                <h2>파이리</h2>
+                <p>도룡뇽 포켓몬. 타입은 불꽃이다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="이상해씨.jpg" alt="이상해씨">
+            <div class="text-wrap">
+                <h2>이상해씨</h2>
+                <p>씨앗 포켓몬. 타입은 풀/독이다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="꼬북이.jpg" alt="꼬북이">
+            <div class="text-wrap">
+                <h2>꼬북이</h2>
+                <p>꼬마거북 포켓몬. 타입은 물이다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
