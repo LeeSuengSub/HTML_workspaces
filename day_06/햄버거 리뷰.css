@@ -35,6 +35,7 @@ header{
 a{
     text-decoration: none;
     color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 body{
     background-image: url(topimage-classic-hamburger-2019m04-800x534-curiosa.jpg);
@@ -67,7 +68,9 @@ body{
     margin: 5px auto 5px;
 }
 .set{
+    color: white;
     margin: 10px auto 15px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .review{
     width: 400px;
@@ -100,7 +103,9 @@ footer{
     padding: 8px 12px;
 }
 .ment p{
+    font-size: 20px;
     color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .card{
     display: inline-block;
