@@ -10,6 +10,12 @@
         function tosuccess() {
             alert('리뷰해주셔서 감사합니다.')
         }
+        function toclick() {
+            alert('추천하였습니다')
+        }
+        function toclick2() {
+            alert('비추천하였습니다.')
+        }
     </script>
 </head>
 <body>
@@ -69,6 +75,43 @@
 
             <br> <input class="submit" type="submit" value="제출하기" onclick="tosuccess()">
         </form>
+        <div class="User_review">
+            <h2>지금까지의 리뷰</h2>
+            <div class="User_review-container">
+                <div class="item">
+                    <h2>햄버거 추천</h2>
+                    <div class="caption">
+                        <h3>acade***</h3>
+                        <p>큰 기대하지 않고 주문했는데 너무 맛있네요.</p>
+                        <button onclick="toclick()">추천</button>
+                        <button onclick="toclick2()">비추천</button>
+                    </div>
+                    <img src="00.png" alt="">
+                </div>
+                <div class="item">
+                    <h2>피자 추천</h2>
+                    <div class="caption">
+                        <h3>zlam***</h3>
+                        <p> 피자가 제 취향에 딱 맞아요. </p>
+                        <button onclick="toclick()">추천</button>
+                        <button onclick="toclick2()">비추천</button>
+                    </div>
+                    <img src="image_8621100971509071654023.jpg" alt="">
+                </div>
+                <div class="item">
+                    <h2>치킨 추천</h2>
+                    <div class="caption">
+                        <h3>foev***</h3>
+                        <p> 단맛과 매운맛의 조화가 너무 좋았어요. </p>
+                        <button onclick="toclick()">추천</button>
+                        <button onclick="toclick2()">비추천</button>
+                    </div>
+                    <img src="99F3DD505B780EEA13.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+
         <div class="ment">
             <p>리뷰를 작성해 주신분들께는 추첨을 통해 포켓몬 카드를 드립니다.</p>
         </div>

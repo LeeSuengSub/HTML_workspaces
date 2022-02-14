@@ -6,7 +6,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    height: 150vh;
+    height: 200vh;
     justify-content: space-between;
 
 }
@@ -89,6 +89,68 @@ body{
     height: 50px;
     margin: 5px auto 100px;
 }
+.User_review h2{
+    color: yellow;
+}
+.User_review-container{
+    display: flex;
+    width: 1000px;
+    height: 400px;
+    margin: 80px auto;
+}
+.item {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    padding: 25px;
+    transition: 1.5s;
+}
+.item:hover{
+    flex-grow: 2.5;
+}
+.item:nth-child(1){
+    background-color: aqua;
+}
+.item:nth-child(2){
+    background-color: salmon;
+}
+.item:nth-child(3){
+    background-color: darkseagreen;
+}
+.item:hover .caption{
+display: block;
+}
+.item h2{
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+}
+.caption{
+    display: none;
+    font-size: 18px;
+    margin: 25px 0;
+    max-width: 240px;
+}
+.item img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+}
+.caption button:nth-child(1){
+    border: 1px solid black;
+    border-radius: 30px;
+    background: transparent;
+    padding: 8px 18px;
+    color: blue;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 22px;
+}
+
 footer{
     display: flex;
     justify-content: space-between;
@@ -122,7 +184,7 @@ footer{
 }
 .card:hover{
     cursor: pointer;
-    transform: scale(1.3);
+    transform: scale(1.33);
 }
 .card img{
     width: 260px;
