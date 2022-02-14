@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .card-container{
+            display: flex;
+            width: 1000px;
+            height: 400px;
+            /* margin: 위&아래, 오른쪽&왼쪽 */
+            margin: 100px auto;
+        }
+        .item{
+            position: relative;
+            /* item에다가 flex:1을 하면 아이템들이 동일한 사이즈로 변하게 됨. */
+            flex: 1;
+            height: 100%;
+            padding: 25px;
+            /* item 태그 하위 글자는 모두 white로 변겸 됨. */
+            color: white;
+            transition: 1.2s;
+        }
+        .item:hover{
+            /* flex-grow: 회면이 옆으로 넓어짐 */
+            flex-grow: 2.3;
+        }
+        .item:hover .caption{
+            /* caption에서 display: none을 다시 보이게 하는 기능 */
+            display: block;
+        }
+        /* nth-child를 통해 같은 이름의 class를 각각 다르게 설정할 수 있다. */
+        .item:nth-child(1){
+            background-color: darkcyan;
+        }
+        .item:nth-child(2){
+            background-color: salmon;
+        }
+        .item:nth-child(3){
+            background-color: darkblue;
+        }
+        .item h2{
+            font-size: 30px;
+            font-weight: 800;
+            /* 글자 가운데 정렬 */
+            text-align: center;
+        }
+        .caption{
+            display: none;
+            font-size: 16px;
+            margin: 28px 0;
+            max-width: 230px;
+        }
+        .item img{
+            /* item에 relative를 입력하고 img에 absolute를 입력하면 사진의 위치이동이 가능하다. */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 200px;
+        }
+        .caption button{
+            border: 1px solid white;
+            border-radius: 30px;
+            /* 배경을 투명하게 하려면 "trnasparent" */
+            background: transparent;
+            padding: 8px 18px;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-container">
+            <div class="item">
+                <h2>크로스 핏</h2>
+                <div class="caption">
+                    <p>크로스 핏은 너한텐 어려울걸.</p>
+                    <button>예약하기</button>
+                </div>
+                <img src="img1.png" alt="">
+            </div>
+            <div class="item">
+                <h2>웨이트 훈련</h2>
+                <div class="caption">
+                    <p>웨이트 훈련은 힘든데 할거야?</p>
+                    <button>예약하기</button>
+                </div>
+                <img src="img2.png" alt="">
+            </div>
+            <div class="item">
+                <h2>댄스</h2>
+                <div class="caption">
+                    <p>댄스는 피곤한데 이걸 한다고?</p>
+                    <button>예약하기</button>
+                </div>
+                <img src="img3.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
