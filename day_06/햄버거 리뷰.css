@@ -8,7 +8,6 @@
     flex-direction: column;
     height: 200vh;
     justify-content: space-between;
-
 }
 header{
     display: flex;
@@ -16,6 +15,14 @@ header{
     justify-content: space-between;
     padding: 8px 12px;
     align-items: center;
+}
+.line{
+    position: relative;
+    border: 3px solid red;
+    border-radius: 20px;
+    width: 600px;
+    left: 35%;
+    background-color: beige;
 }
 .logo{
     font-size: 24px;
@@ -61,6 +68,7 @@ body{
     left: 146px;
     width: 5%;
     height: 30px;
+    width: 100px;
 }
 .name{
     width: 300px;
@@ -79,9 +87,10 @@ body{
     word-wrap: break-all;
 }
 .star{
-    width: 10%;
+    width: 30%;
     height: 40px;
     margin: 5px auto;
+    text-align: center;
 }
 .submit{
     cursor: pointer;
@@ -89,8 +98,9 @@ body{
     height: 50px;
     margin: 5px auto 100px;
 }
-.User_review h2{
+.User_review h1{
     color: yellow;
+    margin: 100px;
 }
 .User_review-container{
     display: flex;
