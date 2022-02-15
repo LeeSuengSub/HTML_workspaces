@@ -6,7 +6,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    height: 200vh;
+    height: 250vh;
     justify-content: space-between;
 }
 header{
@@ -21,7 +21,7 @@ header{
     border: 3px solid red;
     border-radius: 20px;
     width: 600px;
-    left: 35%;
+    left: 30%;
     background-color: beige;
 }
 .logo{
@@ -52,7 +52,7 @@ body{
     background-size: cover;
 }
 .site{
-    margin: 10px auto 0;
+    margin: px auto 0;
     width: 100%;
     height: auto;
     text-align: center;
