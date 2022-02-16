@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .side-nav{
+            /* position은 fixed로 공식 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: salmon;
+            width: 250px;
+            height: 100%;
+            padding: 20px 30px;
+        }
+        .nav-links{
+            list-style: none;
+        }
+        .nav-links li{
+            padding: 10px 10px;
+        }
+        .nav-links li:hover{
+            background-color: aquamarine;
+            border-radius: 6px;
+            transition: 0.8s;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 14px;
+        }
+        .nav-links li a i{
+            font-size: 22px;
+            margin-right: 20px;
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/ec2e6610a2.js"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="side-nav">
+                <!-- 로고 -->
+                <ul class="nav-links">
+                    <li><a href="#"><i class="fa-solid fa-house"></i>HOME</a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment-dots" style="color: blue;"></i>Message</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear" style="color: grey;"></i>Setting</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
