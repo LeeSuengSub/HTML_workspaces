@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            position: relative;
+            width: 100%;
+            height: 450px;
+            background-image:linear-gradient(
+                rgba(4,10,20,0.8),
+                rgba(4,10,20,0.8)
+            ), url(pexels-karolina-grabowska-4968634.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .side-nav{
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            width: 220px;
+            height: 100%;
+            background-color: grey;
+        }
+        .side-nav ul{
+            list-style: none;
+        }
+        .side-nav ul li{
+            cursor: pointer;
+            padding: 20px;
+            transform: scale(1);
+        }
+        .side-nav ul li:hover{
+            background-color: orangered;
+            transition: 0.8s;
+            transform: scale(1.1);
+        }
+        .side-nav img{
+            position: absolute;
+            bottom: 20px;
+            right: 35px;
+        }
+        .side-nav a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        header .text-box{
+            position: absolute;
+            width: 90%;
+            color: white;
+            top: 30%;
+            text-align: center;
+        }
+        .text-box h1{
+            font-size: 50px;
+        }
+        .text-box p{
+            font-size: 12px;
+            margin-top: 16px;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+        .text-box a{
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 24px;
+        }
+        .text-box a:hover{
+            border: 1px solid red;
+            background-color: red;
+            transition: 1800ms;
+
+        }
+        body{
+            background-color: white;
+        }
+        .card{
+            padding: 20px;
+        }
+        .card h2{
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="side-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">카드소개</a></li>
+                    <li><a href="#">카드혜택</a></li>
+                    <li><a href="#">분실신고</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <img src="Hyundai_card_CI_new.png" alt="">
+            </div>
+            <div class="text-box">
+                <h1>카드 발급안내</h1>
+                <p>계약을 체결하기 전에 자세한 내용은 해당 카드사의 상품설명서와 약관을 읽어보시기 바랍니다.</p>
+                <a href="">카드 발급신청하기</a>
+            </div>
+        </header>
+        <div class="card">
+            <h2>고민하는 당신께 카드를 추천해드립니다.</h2>
+            <img src="card_SBHC_h.png" alt="">
+            <div class="ment">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
