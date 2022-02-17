@@ -11,6 +11,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .container{
+            background-color: ivory;
+        }
         header{
             position: relative;
             height: 500px;
@@ -90,9 +93,14 @@
             text-align: center;
             padding: 20px;
         }
-        .card{
+        .card img{
             margin: 0 50px;
+            transform: scale(1);
+            transition: 0.9s;
+        }
+        .card img:hover{
             cursor: pointer;
+            transform: scale(1.09);
         }
         .card-inf{
          display: flex;
@@ -131,7 +139,7 @@
                 <p>계약을 체결하기 전에 자세한 내용은 카드사의 상품설명서를 참고바랍니다.</p>
                 <!-- 링크 태그를 버튼처럼 꾸밀 예정 -->
                 <!-- #은 아직 이동할 사이트가 없다는 걸 의미 -->
-                <a href="#">카드 발급신청하기</a>
+                <a href="https://www.hyundaicard.com/cpc/ma/CPCMA0101_01.hc">카드 발급신청하기</a>
             </div>
         </header>
         <h2>카드소개</h2>
