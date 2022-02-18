@@ -53,7 +53,7 @@ header{
     bottom: 0;
     left: 50%;
     font-size: 24px;
-    color: black;
+    color: rgba(46, 49, 49, 1);
     transform: translateX(-50%);
     transition: 1.5s;
 }
