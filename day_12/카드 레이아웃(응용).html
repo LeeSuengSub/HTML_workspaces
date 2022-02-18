@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3%;
+        }
+        body{
+            background-color: darkslategrey;
+        }
+        /* .gallery-col{ 
+            display: flex;
+            flex-direction: column;
+        }*/
+        .gallery{
+            width: 80%;
+            margin: auto;
+        }
+        .gallery .title{
+            text-align: center;
+        }
+        .gallery .title h1{
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .gallery .title p{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+            color: grey;
+        }
+        .gallery-col{
+            position: relative;
+            /* 아이템 크기를 줄임 */
+            flex-basis: 24%;
+        }
+        .gallery-col img{
+            width: 100%;
+            height: 90%;
+            border-radius: 10px;
+        }
+        .layer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90%;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        .layer h3{
+            position: absolute;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: 1.2s;
+            bottom: 0;
+            left: 50%;
+            font-size: 20px;
+            color: rgba(46, 49, 49, 1);
+        }
+        .layer:hover{
+            background-color: rgba(232, 232, 232, 0.8);
+        }
+        .layer:hover h3{
+            opacity: 1;
+            bottom: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- semantic tag -->
+        <section class="gallery">
+            <!-- 사진, 사진소개내용, 사진 부가설명 -->
+            <!-- 사진 설명 방법1 div로 intro 묶기.-->
+            <!-- 사진 설명 방법2 바로 h1, p태그 적기 -->
+            <div class="gallery title">
+                <h1>제목</h1>
+                <p>본문 내용</p>
+            </div>
+            <div class="row">
+                <div class="gallery-col">
+                    <img src="img/pexels-daria-shevtsova-1070945.jpg" alt="">
+                    <div class="layer">
+                        <h3>사진소개1</h3>
+                    </div>
+                </div>
+                <div class="gallery-col">
+                    <img src="img/pexels-daria-shevtsova-1070981.jpg" alt="">
+                    <div class="layer">
+                        <h3>사진소개2</h3>
+                    </div>
+                </div>
+                <div class="gallery-col">
+                    <img src="img/pexels-john-916446.jpg" alt="">
+                    <div class="layer">
+                        <h3>사진소개3</h3>
+                    </div>
+                </div>
+                <div class="gallery-col">
+                    <img src="img/pexels-luciann-photography-3566226.jpg" alt="">
+                    <div class="layer">
+                        <h3>사진소개4</h3>
+                    </div>
+                </div>      
+        </section>
+    </div>
+</body>
+</html>
