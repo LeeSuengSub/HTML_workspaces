@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 150px;
+    height: 180px;
+    perspective: 300px;
+    margin: 50px auto 0;
+}
+.container .card{
+    width: 150px;
+    height: 180px;
+    backface-visibility: hidden;
+    font-size: 35px;
+    transition: 1s;
+}
+.container .card.front{
+    position: absolute;
+    transform: rotateY(0deg);
+}
+.container:hover .card.front{
+    transform: rotateY(180deg);
+}
+.container .card.back{
+    transform: rotateY(-180deg);
+}
+.container:hover .card.back{
+    transform: rotateY(0deg);
+}
