@@ -11,39 +11,42 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .black{
-            background-color: black;
-            width: 100%;
+        .big{
+            margin: 50px auto 0;
+            width: 500px;
+            height: 500px;
+            border: 10px solid;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: darkcyan;
+        }
+        .middle{
+            width: 300px;
             height: 300px;
+            border: 10px solid;
+            border-radius: 50px;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
+            background-color: cadetblue;
         }
-        .white{
+        .small{
             width: 100px;
-            height: 200px;
-            background-color: white;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: auto;
-        }
-        .red{
-            width: 50px;
             height: 100px;
-            background-color: red;
-            margin: auto;
+            border: 10px solid;
+            border-radius: 50px;
+            background-color: aqua;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="black">
-            <div class="white"></div>
-            <div class="red"></div>
-            <div class="red"></div>
-            <div class="red"></div>
-            <div class="white"></div>
+        <div class="big">
+            <div class="middle">
+                <div class="small"></div>
+            </div>
         </div>
     </div>
 </body>
