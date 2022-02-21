@@ -11,9 +11,49 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* 백그라운드에 이미지를 넣으면 따라오는 것들. */
+            background-image: url(img/background.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .rocket{
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            width: 250px;
+            /* animation: 이름을 설정해야 애니메이션을 재생할 수 있다.(ex: recket)
+                linear: 처음부터 끝까지 부드럽게 일정한 속도로 진행
+                infinite: 애니메이션 무한 반복 */
+            animation: rocket 6s linear infinite;
+            /* 애니메이션에 이름을 rocket으로 지었기에 어노테이션에 이름도 rocket이어야 한다.
+                이름이 다르면 반응하지 않는다. */
+        }
+        /* @: 어노테이션 */
+        @keyframes rocket{
+            0%{
+                bottom: 0;
+                opacity: 0.1;
+            }
+            90%{
+                bottom: 70%;
+                transform: rotateX(-180deg);
+                opacity: 1;
+            }
+            100%{
+                bottom: -0%;
+                opacity: 0.1;
+                transform: rotateX(-180deg);
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <img class="rocket" src="img/rocket.png" alt="">
+    </div>
 </body>
 </html>
