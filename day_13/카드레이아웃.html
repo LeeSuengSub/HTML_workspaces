@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 80%;
+            margin: 50px auto 0;
+        }
+        .intro{
+            text-align: center;
+        }
+        .intro h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .intro p{
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            margin-top: 10px;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+        }
+        .cafe-col{
+            flex-basis: 90%;
+        }
+        .cafe-col img{
+            width: 80%;
+            height: 60%;
+            text-align: left;
+            margin-bottom: 5%;
+            border-radius: 8px;
+        }
+        .cafe-col h3{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <!-- intro: 소개글이 있는 박스 -->
+            <div class="intro">
+                <h1>메뉴</h1>
+                <p>어서오세요. <br>커피향과 빵냄새로 행복이 가득한 카페입니다.</p>
+            </div>
+            <div class="row">
+                <div class="cafe-col">
+                    <img src="img/pexels-jason-villanueva-851555.jpg" alt="">
+                        <h3>커피</h3>
+                        <p>커피</p>
+                </div>
+                <div class="cafe-col">
+                    <img src="img/pexels-marta-dzedyshko-2067621.jpg" alt="">
+                    <h3>빵</h3>
+                    <p>빵</p>
+                </div>
+                <div class="cafe-col">
+                    <img src="img/pexels-teejay-1362534.jpg" alt="">
+                    <h3>아이스크림</h3>
+                    <p>아이스크림</p>
+                </div>
+        </section>
+    </div>
+</body>
+</html>
