@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .back{
+            width: 60%;
+            height: 210px;
+            background-color: black;
+            margin: 0 auto 0;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .box{
+            width: 100px;
+            height: 200px;
+            border: solid;
+            background-color: yellow;
+        }
+        .black{
+            width: 60%;
+            height: 210px;
+            background-color: black;
+            margin: 20px auto 0;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .black .box:nth-child(1){
+            flex-grow: 1.1;
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .box:nth-child(1) .two{
+            width: 500px;
+            height: 50px;
+            background-color: black;
+            margin: 10px;
+            animation: start 2.5s linear infinite;
+        }
+        @keyframes start{
+            0%{
+                opacity: 1;
+                width: 0%;
+
+            }
+            100%{
+                opacity: 1;
+                width: 30%;
+            }
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="black">
+            <div class="box">
+                <div class="two"></div>
+                <div class="two"></div>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>
