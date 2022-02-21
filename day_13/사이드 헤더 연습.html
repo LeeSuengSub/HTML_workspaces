@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            position: fixed;
+            width: 300px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: salmon;
+            padding: 20px;
+        }
+        .title{
+            text-align: center;
+        }
+        .title h2{
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .title p{
+            font-size: 14px;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+        .list ul{
+            list-style: none;
+        }
+        .list ul a{
+            text-decoration: none;
+            color: black;
+            padding: 12px;
+        }
+        .list ul li{
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .list ul li:hover{
+            background-color: yellow;
+            border-radius: 6px;
+            transition: 0.8s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h2>제목</h2>
+                <p>내용</p>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SETTINS</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
