@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 80%;
+            height: 200px;
+            margin: auto;
+            margin-bottom: 50px;
+            background-color: #777;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .item{
+            /* flex-basis : 아이템 초기 크기 설정 */
+            /* flex : 1을 하게 되면 모든 아이템 크기가 
+            flex-basis: 100%된 것 처럼 행동 */
+            /*컨테이너 크기보다 아이템 크기로 결정이 난다. */
+            flex-basis: 20%;
+            background-color: aquamarine;
+            width: 200px;
+            height: 180px;
+            border: 2px solid black;
+        }
+        /* 방법2. */
+        .class02 .row .item:nth-child(1){
+            background-color: red;
+            /* item 성장 */
+            flex-grow: 1;
+        }
+        .row-col{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
+            height: 150px;
+            /* 컨테이너 크기가 없어서 띄어지지 않은것  */
+            padding: 20px;
+        }
+        .item-col{
+            width: 100%;
+            height: 20px;
+            background-color: black;
+        }
+        .item-col:nth-child(1){
+            animation: ani 3s linear infinite;
+        }
+        .item-col:nth-child(2){
+            animation: bar 3s linear infinite;
+        }
+        .item-col:nth-child(3){
+            animation: revers 3s linear infinite;
+        }
+        @keyframes bar{
+            0%{
+                opacity: 1;
+                transform: scaleX(-1);
+            }
+            100%{
+                opacity: 1;
+                transform: scaleX(0);
+            }
+        }
+        @keyframes ani{
+            0%{
+                opacity: 1;
+                width: 0;
+            }
+            100%{
+                opacity: 1;
+                width: 100%;
+            }
+        }
+        @keyframes revers{
+            0%{
+                width: 100%;
+            }
+
+            100%{
+                width: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="class01">
+            <div class="row">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </section>
+        <section class="class02">
+            <div class="row">
+                <!--방법1. <div class="item" style="background-color: red;"></div> -->
+                <div class="item">
+                    <div class="row-col">
+                        <div class="item-col"></div>
+                        <div class="item-col"></div>
+                        <div class="item-col"></div>
+                    </div>
+                </div>
+                <div class="item"></div>
+                <div class="item"></div>
+        </section>
+    </div>
+</body>
+</html>
