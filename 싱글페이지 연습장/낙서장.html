@@ -11,43 +11,72 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .big{
-            margin: 50px auto 0;
-            width: 500px;
-            height: 500px;
-            border: 10px solid;
-            border-radius: 50px;
+        .back{
+            width: 80%;
+            height: 200px;
+            background-color: black;
+            margin: 0 auto 0;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background-color: darkcyan;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 30px;
         }
-        .middle{
-            width: 300px;
-            height: 300px;
-            border: 10px solid;
-            border-radius: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: cadetblue;
+        .red{
+            width: 20%;
+            height: 180px;
+            background-color: red;
+            border: 5px solid purple;
         }
-        .small{
-            width: 100px;
-            height: 100px;
-            border: 10px solid;
-            border-radius: 50px;
+        .black{
+            width: 80%;
+            height: 200px;
             background-color: aqua;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin: 0 auto 0;
+        }
+        .black .red:nth-child(1){
+            background-color: yellow;
+            flex-grow: 1;
+
+        }
+        .com{
+            width: 80%;
+            height: 30px;
+            margin: 20px;
+            background-color: black;
+            animation: start 4s linear infinite;
+        }
+        @keyframes start{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 80%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="big">
-            <div class="middle">
-                <div class="small"></div>
+        <header>
+            <div class="back">
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
             </div>
-        </div>
+            <div class="black">
+                <div class="red">
+                    <div class="com"></div>
+                    <div class="com"></div>
+                </div>
+                <div class="red"></div>
+                <div class="red"></div>
+            </div>
+        </header>
     </div>
 </body>
 </html>
