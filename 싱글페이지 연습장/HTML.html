@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table {
+        margin: auto;
+        box-shadow: 0 3px 7px grey;
+        background-color: white;
+        }
+
+        table:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        tr {
+            border: 1px solid #444444;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eaeaeb;
+        }
+
+        thead {
+            box-shadow: 0 1px 5px grey;
+        }
+
+        th {
+            padding: 1rem 2rem;
+            letter-spacing: 0.4rem;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        td {
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>Hello2</h2>
+    <h3>Hello3</h3>
+    <h4>Hello4</h4>
+    <h5>Hello5</h5>
+    <h6>Hello6</h6>
+    <h3>링크</h3>
+    <a href="https://www.google.com/"></a>
+
+    <h3>input</h3>
+    아이디: <input type="text" placeholder="아이디">
+    비밀번호: <input type="password" placeholder="비밀번호" maxlength="6">
+    <input type="number">
+    <input type="file">
+    <input type="date">
+
+    <h3>checkbox</h3>
+    <input type="checkbox" id="사과">
+    <label for="사과">사과</label>
+    <h1>
+        <input type="checkbox" id="바나나" checked>
+        <label for="바나나">바나나</label>
+    </h1>
+    <h3>
+        <input type="checkbox" id="키위" checked>
+        <label for="키위">키위</label>
+    </h3>
+
+    <h3>날짜,시간 표시</h3>
+    <input type="date">
+    <input type="month">
+    <input type="week">
+    <input type="time">
+
+    <h3>버튼</h3>
+    <input type="button" value="버튼">
+    <button>버튼</button>
+
+    <h3>선택상자</h3>
+    <select name="" id="">
+        <option value="데이터가 받는 이름">---</option>
+        <option value="">키보드</option>
+        <option value="">마우스</option>
+        <option value="">모니터</option>
+    </select>
+
+    <h3>readonly</h3>
+    <input type="text" id="안녕하세요" value="안녕하세요" name="안녕하세요" readonly>
+
+    <h3>Form</h3>
+    <form action="">
+        <input type="text" placeholder="아이디 입력">
+        <input type="password" maxlength="8" placeholder="비밀번호 입력">
+        <input type="number" placeholder="2차 비밀번호 입력">
+        <input type="submit">
+    </form>
+    <h3>테이블</h3>
+    <table>
+       <thead>
+           <tr>
+               <th>음료수</th>
+               <th>비용</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td>코카콜라</td>
+               <td rowspan="2">2000</td>
+           </tr>
+           <tr>
+               <td>펩시</td>
+           </tr>
+           <tr>
+               <td>환타</td>
+               <td>1800</td>
+           </tr>
+       </tbody>
+    </table>
+    <h3>List</h3>
+    <ul>
+        <li><a href="https://www.youtube.com/">유튜브</a></li>
+        <li><a href="https://www.google.com/">구글</a></li>
+    </ul>
+
+    <h3>ol</h3>
+    <ol type="1">
+        <li>JAVA</li>
+        <li>RUBY</li>
+        <li>Python</li>
+    </ol>
+
+    
+</body>
+</html>
