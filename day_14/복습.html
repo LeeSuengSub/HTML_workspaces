@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            margin: 50px auto 0;
+            width: 90%;
+            height: 500px;
+        }
+        .title{
+            width: 100%;
+            height: auto;
+            /* border: 3px solid black; */
+            margin-bottom: 30px;
+        }
+        .title h2{
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            justify-content: space-around;
+        }
+        .item{
+            padding: 2% 6%;
+            text-align: center;
+            border: 3px solid black;
+            background-color: #1f283b;
+            color: #fff;
+            border-radius: 16px;
+        }
+        .item p{
+            font-size: 22px;
+        }
+        .item h2{
+            margin: 20px 0 40px;
+            font-size: 44px;
+            font-weight: 500;
+        }
+        .item span{
+            font-size: 18px;
+        }
+        .item ul{
+            text-align: left;
+            margin: 20px 0;
+        }
+        .item ul li{
+            margin: 15px 0;
+        }
+        .item button{
+            width: 100%;
+            padding: 14px 0;
+            cursor: pointer;
+            background: transparent;
+            color: #fff;
+            border: 1px solid #e33058;
+            transition: 1s;
+            border-radius: 6px;
+        }
+        .item button:hover{
+            background-color: #e33058;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="title">
+                <h2>Choose your plan</h2>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <p>Starter</p>
+                    <h2>19$ <span>/month</span></h2>
+                    <ul>
+                        <li>1 Website</li>
+                        <li>10 GB Disk Space</li>
+                        <li>Free email Address</li>
+                        <li>Basic Web builder</li>
+                        <li>No SSL Certificate</li>
+                        <li>Limit Support</li>
+                    </ul>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

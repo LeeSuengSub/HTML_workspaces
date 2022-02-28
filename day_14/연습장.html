@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section{
+            margin: 50px auto 0;
+            width: 90%;
+            height: 500px;
+        }
+        .title{
+            width: 100%;
+            height: auto;
+            margin: 50px auto 0;
+            margin-bottom: 50px;
+        }
+        .title h1{
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            justify-content: space-around;
+        }
+        .item{
+            padding: 2% 6%;
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 16px;
+            background-color: #1f283b;
+            color: #fff;
+        }
+        .item p{
+            font-size: 22px;
+        }
+        .item h2{
+            margin: 20px 0 40px;
+            font-size: 44px;
+            font-weight: 500;
+        }
+        .item ul{
+            text-align: left;
+        }
+        .item ul li{
+            margin: 15px 0;
+        }
+        .item button{
+            color: #fff;
+            width: 100%;
+            padding: 14px 0;
+            background: transparent;
+            border: 1px solid red;
+            cursor: pointer;
+            transition: 1.25s;
+        }
+        .item button:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="title">
+                <h1>RPG 게임 스타터팩</h1>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <p>Bronze Pack</p>
+                    <h2>$19</h2>
+                    <ul>
+                        <li>기본 아바타 지급</li>
+                        <li>펫 1마리 지급</li>
+                        <li>스타터팩 지급</li>
+                        <li>1달간 경험치 2배 혜택</li>
+                    </ul>
+                    <button>결제하기</button>
+                </div>
+                <div class="item">
+                    <p>Gold Pack</p>
+                    <h2>$29</h2>
+                    <ul>
+                        <li>기본 아바타 지급</li>
+                        <li>펫 2마리 지급</li>
+                        <li>골드 스타터팩 지급</li>
+                        <li>1달간 경험치 3배 혜택</li>
+                    </ul>
+                    <button>결제하기</button>
+                </div>
+                <div class="item">
+                    <p>platinum Pack</p>
+                    <h2>$59</h2>
+                    <ul>
+                        <li>프리미엄 아바타 지급</li>
+                        <li>펫 5마리 지급</li>
+                        <li>플래티넘 스타터팩 지급</li>
+                        <li>3달간 경험치 3배 혜택</li>
+                    </ul>
+                    <button>결제하기</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
