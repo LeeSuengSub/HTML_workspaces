@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            /* grid 2차원 UI */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-gap: 50px;
+            width: 80%;
+            height: 600px;
+            margin: 30px auto 0;
+            background-color: #777;
+            /* repeat() : grid 안에 있는 아이템을 모두 크기 조절 
+                repeat(x,y) :
+                x: 반복 횟수
+                y: 값(크기에 대한)
+                minmax() : 최소크기와 최대 크기 조절
+                fr(fraction) : flex : 1 과 동일*/
+        }
+        .item{
+            width: 100%;
+            height: 240px;
+            background-color: skyblue;
+            border: 2px solid black;
+            transform: scale(1);
+            transition: 1.2s;
+            box-shadow: 0 35px 35px black;
+        }
+        .item img{
+            width: 100%;
+            height: 200px;
+        }
+        .item h2{
+            text-align: center;
+        }
+        .item:hover{
+            transform: scale(1.12);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="item">
+                <a href="수업2.html">
+                <img src="img/GettyImages-a10424918.jpg" alt="">
+                <h2>개나리</h2>
+
+                </a>
+            </div>
+            <div class="item">
+                <img src="../day_07/img/파이리.gif" alt="">
+                <h2>파이리</h2>
+                <a href="#">클릭</a>
+                </div>
+            <div class="item">
+                <img src="../day_07/img/이상해씨.jpg" alt="">
+                <h2>이상해씨</h2>
+                <a href="#">클릭</a>
+            </div>
+            <div class="item">
+                <img src="../day_07/img/꼬북이.jpg" alt="">
+                <h2>꼬북이</h2>
+                <a href="#">클릭</a>
+            </div>
+            <div class="item">
+                <a href="/day_15/수업2.html">
+                <img src="img/cherry-blossom-3300758__480.jpg" alt="">
+                <h2>벛꽃</h2>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
