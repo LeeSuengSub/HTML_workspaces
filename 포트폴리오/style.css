@@ -154,6 +154,7 @@ header{
     padding: 46px 0;
 }
 .greeting-wrapper h1{
+    font-family: 'ONE-Mobile-POP';
     text-align: center;
     font-size: 56px;
 }
@@ -162,9 +163,10 @@ header{
     border: 1px solid var(--borderColor);
     /* border-radius : (위 왼쪽) (위 오른쪽) (아래 오른쪽) (아래 왼쪽) */
     border-radius: 5px 5px 0 0;
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'nav-wrapper nav-wrapper info-wrapper do-wrapper';
+    grid-template-areas: "nav-wrapper nav-wrapper" "info-wrapper do-wrapper";
 }
 .nav-wrapper{
     width: 100%;
@@ -185,6 +187,90 @@ header{
 #dot-3{
     background-color: #2aca3e;
 }
+/* dot: 맥북 종료, 축소, 확대 버튼 */
 .dot{
+    cursor: pointer;
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 8px;
+    box-sizing: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    transition: 0.3s;
+}
+.dot:hover{
+    transform: scale(2);
+}
+.dots-wrapper{
+    display: flex;
     padding: 10px;
+}
+.info-wrapper{
+    grid-area: info-wrapper;
+    padding: 30px 0;
+}
+.info-wrapper img{
+    display: block;
+    width: 230px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.info-wrapper h5{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.do-wrapper{
+    grid-area: do-wrapper;
+    padding: 50px 10px;
+}
+.preview-shadow{
+    background-color: #f0ead6;
+    width: 300px;
+    height: 150px;
+    /* .preveiw 옆으로 밀어내려고 */
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.preview{
+    width: 330px;
+    border: 1.5px solid #17a2b8;
+    background-color: rgba(251, 249, 243, 0.8);
+    padding: 15px;
+    position: relative;
+}
+.corner{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+}
+#corner-tl{
+    top: -5px;
+    left: -5px;
+}
+#corner-tr{
+    top: -5px;
+    right: -5px;
+}
+#corner-bl{
+    bottom: -5px;
+    left: -5px;
+}
+#corner-br{
+    bottom: -5px;
+    right: -5px;
+}
+.preview h3{
+    font-size: 28px;
+    margin: 28px 0;
+}
+.preview p{
+    font-size: 18px;
+    color: #4b5156;
+    margin: 16px 0;
 }
