@@ -146,3 +146,45 @@ h6{
     text-decoration: none;
     color: #17a2b8;
 }
+header{
+    background-color: var(--mainColor);
+    border-bottom: var(--borderColor);
+}
+.greeting-wrapper{
+    padding: 46px 0;
+}
+.greeting-wrapper h1{
+    text-align: center;
+    font-size: 56px;
+}
+.intro-wrapper{
+    background-color: #fff;
+    border: 1px solid var(--borderColor);
+    /* border-radius : (위 왼쪽) (위 오른쪽) (아래 오른쪽) (아래 왼쪽) */
+    border-radius: 5px 5px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'nav-wrapper nav-wrapper info-wrapper do-wrapper';
+}
+.nav-wrapper{
+    width: 100%;
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+    background-color: var(--mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* id : #, class : . */
+#dot-1{
+    background-color: #fc6058;
+}
+#dot-2{
+    background-color: #fec02f;
+}
+#dot-3{
+    background-color: #2aca3e;
+}
+.dot{
+    padding: 10px;
+}
