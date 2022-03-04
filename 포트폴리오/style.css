@@ -86,3 +86,63 @@ h6{
 .post:hover{
     transform: scale(1.09);
 }
+.main-container{
+    width: 1200px;
+    height: 615px;
+    margin: 0 auto;
+}
+.about-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.about-me{
+    width: 550px;
+    height: auto;
+}
+.about-me p{
+    margin: 16px;
+}
+.about-me h4{
+    font-size: 24px;
+    margin: 32px 0;
+}
+.skills{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0ead6;
+    border-radius: 10px;
+}
+.skills ul{
+    list-style: none;
+    padding-left: 40px;
+    padding: 16px 0;
+}
+.skills ul li{
+    color: #4b5156;
+}
+.social-links{
+    width: 550px;
+    height: auto;
+}
+.social-links img{
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+    /* object-fit : 사진 깨짐 방지 */
+    object-fit: cover;
+}
+.social-links h3{
+    /* 글씨 가운데 정렬 */
+    text-align: center;
+    margin: 28px 0;
+    font-size: 28px;
+}
+.github{
+    text-align: center;    
+}
+.github a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #17a2b8;
+}
