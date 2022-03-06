@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            margin: 50px auto 0;
+            width: 90%;
+            height: auto;
+            /* border: 1px solid red; */
+            background-color: slateblue;
+        }
+        .title{
+            width: 100%;
+            text-align: center;
+            font-size: 34px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            grid-gap: 70px;
+            padding: 20px 50px;
+        }
+        .item{
+            /* border: 1px solid red; */
+            background-color: rebeccapurple;
+            text-align: center;
+            border-radius: 12px;
+            padding: 8% 12%;
+        }
+        .item p{
+            padding: 16px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .item h2{
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+        .item h2 span{
+            font-size: 16px;
+        }
+        .item ul{
+            text-align: left;
+            margin: 16px 0;
+            margin-bottom: 20px;
+        }
+        .item ul li{
+            margin: 15px 0;
+        }
+        .item button{
+            width: 80%;
+            padding: 8px;
+            border: 1px solid red;
+            background-color: transparent;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 24px;
+            transition: 0.9s;
+            cursor: pointer;
+        }
+        .item button:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="title">
+                <h2>Choose Your Plan</h2>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="text">
+                        <p>Starter</p>
+                        <h2>19$ <span>/month</span></h2>
+                        <ul>
+                            <li>1 WebSite</li>
+                            <li>10 GB Disk Space</li>
+                            <li>Free Email Address</li>
+                            <li>Basic Web Builder</li>
+                            <li>Limit Support</li>
+                        </ul>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <p>Advanced</p>
+                        <h2>29$ <span>/month</span></h2>
+                        <ul>
+                            <li>1 WebSite</li>
+                            <li>10 GB Disk Space</li>
+                            <li>Free Email Address</li>
+                            <li>Basic Web Builder</li>
+                            <li>Limit Support</li>
+                        </ul>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <p>Platinum</p>
+                        <h2>59$ <span>/month</span></h2>
+                        <ul>
+                            <li>1 WebSite</li>
+                            <li>10 GB Disk Space</li>
+                            <li>Free Email Address</li>
+                            <li>Basic Web Builder</li>
+                            <li>Limit Support</li>
+                        </ul>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
