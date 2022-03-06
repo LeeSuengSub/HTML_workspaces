@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1c1d22;
+            color: rgba(255,255,255,0.6);
+        }
+        .wrap{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 파도 css */
+        .circle{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            border: 7px solid #464343;
+            border-radius: 100%;
+            background: linear-gradient(#3c5aff,#52f2fd);
+            transform: translate3d(0,0,0);
+        }
+        .wave-1{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            top: -65%;
+            left: -30%;
+            border-radius: 45%;
+            background: rgba(3,169,244,0.8);
+            animation: move 3s linear infinite;
+        }
+        .wave-2{
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            top: -90%;
+            left: -30%;
+            border-radius: 45%;
+            background: rgba(34,79,242,0.8);
+            animation: move 5s linear infinite;
+        }
+        .wave-3{
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            top: -100%;
+            left: -30%;
+            border-radius: 45%;
+            background: #1d074b;
+            border: 6px solid rgba(131,119,152,0.7);
+            animation: move 7s linear infinite;
+        }
+        .wave-4{
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            top: -100%;
+            left: -30%;
+            border-radius: 46%;
+            background: linear-gradient(rgba(252,251,232,0.1) 10%, transparent);
+            animation: move 7s linear infinite;
+        }
+        @keyframes move{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        /* 달 css */
+        .sub-harf{
+            position: absolute;
+            top: 19%;
+            left: 33%;
+            font-size: 130px;
+            border-radius: 50%;
+            color: rgba(255,255,255,0.8);
+            animation: moon-rotate 4s linear infinite;
+        }
+        .sub-harf-blur{
+            filter: blur(10px);
+            -webkit-filter: blur(10px);
+        }
+        @keyframes moon-rotate{
+            0%, 100%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(-20deg);
+            }
+        }
+        /* 별 */
+        .sub-deco{
+            position: absolute;
+            font-size: 13px;
+        }
+        .sub-deco-1{
+            top: 70px;
+            left: 90px;
+            animation: star-one 2s linear infinite;
+        }
+        .sub-deco-2{
+            top: 50px;
+            left: 110px;
+            animation: star-two 2.3s linear infinite;
+        }
+        .sub-deco-3{
+            top: 180px;
+            left: 45px;
+            animation: star-three 2.7s linear infinite;
+        }
+        .sub-deco-4{
+            top: 120px;
+            left: 40px;
+            font-size: 20px;
+            animation: star-four 3s linear infinite;
+        }
+        .sub-deco-5{
+            top: 200px;
+            left: 90%;
+            font-size: 30px;
+            animation: star-five 4s linear infinite;
+        }
+        .sub-deco-6{
+            top: 270px;
+            left: 65%;
+            font-size: 40px;
+            animation: star-six 5s linear infinite;
+        }
+        @keyframes star-one{
+            0%,100%{
+                opacity: 0;
+                transform: scale(0);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes star-two{
+            0%,100%{
+                opacity: 0;
+                transform: scale(0);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes star-three{
+            0%,100%{
+                opacity: 0;
+                transform: scale(0);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes star-four{
+            0%,100%{
+                opacity: 0;
+                transform: scale(0);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes star-five{
+            0%,100%{
+                opacity: 0;
+                transform: scale(0);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes star-six{
+            0%,100%{
+                opacity: 0;
+                transform: scale(0);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="circle">
+                <!-- circle -->
+                <div class="wave-1"></div>
+                <div class="wave-2"></div>
+                <div class="wave-3"></div>
+                <div class="wave-4"></div>
+                
+                <!-- moon -->
+                <i class="sub-harf"></i>
+                <i class="sub-harf-blur"></i>
+                
+                <!-- star -->
+                <div class="sub-deco-1">★</div>
+                <div class="sub-deco-2">★</div>
+                <div class="sub-deco-3">★</div>
+                <div class="sub-deco-4">★</div>
+                <div class="sub-deco-5">★</div>
+                <div class="sub-deco-6">★</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
