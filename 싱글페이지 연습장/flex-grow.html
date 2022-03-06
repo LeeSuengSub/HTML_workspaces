@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            display: flex;
+            justify-content: space-around;
+            width: 1200px;
+            height: 500px;
+            margin: 50px auto 0;
+            /* border: 3px solid red; */
+        }
+        .item{
+            position: relative;
+            flex: 1;
+            height: 100%;
+            padding: 30px;
+            color: white;
+            transition: 0.9s;
+        }
+        .item:hover{
+            flex-grow: 1.5;
+        }
+        .item p{
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+        .item:hover .caption{
+            display: block;
+        }
+        .item:nth-child(1){
+            background-color: blue;
+        }
+        .item:nth-child(2){
+            /* 백그라운드 그라데이션. */
+            background: linear-gradient(90deg, blue,yellow);
+        }
+        .item:nth-child(3){
+            background-color: yellow;
+        }
+        .item h2{
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            color: black;
+        }
+        .caption{
+            /* 내용가리기 */
+            display: none;
+            font-size: 20px;
+            margin: 30px 0;
+            max-width: 230px;
+        }
+        .item img{
+            position: absolute;
+            width: 200px;
+            right: 5px;
+            bottom: 5px;
+        }
+        .caption button{
+            border: 1px solid red;
+            border-radius: 20px;
+            background-color: transparent;
+            padding: 10px 20px;
+            color: grey;
+            cursor: pointer;
+            margin-top: 20px;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="item">
+                <h2>연락환영</h2>
+                <div class="caption">
+                    <p>언제든지 전화주세요.</p>
+                    <button>전화 연결</button>
+                </div>
+                <img src="./img/pngwing.com (1).png" alt="">
+            </div>
+            <div class="item">
+                <h2>Instagram</h2>
+                <div class="caption">
+                    <p>Instagram 바로가기</p>
+                    <button>이동하기</button>
+                </div>
+                <img src="./img/pngwing.com (2).png" alt="">
+            </div>
+            <div class="item">
+                <h2>Facebook</h2>
+                <div class="caption">
+                    <p>페이스북 바로가기</p>
+                    <button>이동하기</button>
+                </div>
+                <img src="./img/pngwing.com.png" alt="">
+            </div>
+    </div>
+
+</body>
+</html>
