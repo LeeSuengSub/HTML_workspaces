@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            width: 100%;
+        }
+        .dropdown{
+            flex-basis: 30%;
+            padding: 2%;
+        }
+        .dropdown button{
+            font-size: 32px;
+            border: none;
+            padding: 14px 16px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            transition: 1.2s;
+        }
+        .dropdown button:hover{
+            background-color: red;
+        }
+        .dropdown-content{
+            position: absolute;
+            /* display: none: 안보이게 해줌.
+                display: block: 보이게 해줌. */
+            display: none;
+            background-color: white;
+        }
+        .dropdown-content a{
+            /* a태그는 default로 inline이다. */
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            text-align: left;
+            color: black;
+        }
+        .dropdown-content a:hover{
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="dropdown">
+                <button>Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link1</a>
+                    <a href="#">Link2</a>
+                    <a href="#">Link3</a>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
