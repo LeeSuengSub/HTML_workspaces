@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: #778;
+        }
+        .graph{
+            padding: 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            grid-gap: 30px;
+        }
+        .graph-polar{
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 10%;
+            width: 30%;
+            height: auto;
+            border-radius: 20px;
+            background-color: #fff;
+        }
+        .border{
+            border-top: 10px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="graph">
+            <div class="graph-polar">
+                <h3>그래프</h3>
+                <p>60%</p>
+                <p>40%</p>
+                <div class="border">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const DATA_SET ={
+            datasets : [{
+                label : '테스트',
+                data : [20,25,30,35],
+                backgroundColor : ['red','black','green','salmon'],
+            },],
+        };
+        const MY_CHART ={
+            type : 'polarArea',
+            data : DATA_SET
+        }
+        new Chart(document.getElementById('myChart'),MY_CHART);
+    </script>
+</body>
+</html>
