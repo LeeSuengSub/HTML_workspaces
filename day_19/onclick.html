@@ -11,44 +11,72 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .blue{
-            width: 150px;
-            height: 100px;
-            background-color: blue;
-            cursor: pointer;
-        }
-        h3{
-            text-align: center;
-            padding: 35px;
+        .container{
+            width: 80%;
+            height: 600px;
+            margin: 0 auto 0;
+            border: 3px solid white;
         }
         .item{
-            display: flex;
-            justify-content: space-between;
+            width: 60%;
+            height: 600px;
+            margin: 0 auto 0;
+            border: 3px solid black;
+        }
+        .item ul{
+            text-align: center;
+            display: inline-block;
             width: 200px;
-            height: 100px;
+            list-style: none;
+            background-color: white;
+        }
+        .item ul li{
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            border: 3px solid black;
+            transition: 0.9s;
+            cursor: pointer;
+            border-left: 5px solid salmon;
+        }
+        .item ul li:nth-child(2):hover{
             background-color: red;
         }
-        button{
-            padding: 20px;
-            margin: 100px 0;
+        .item ul li:nth-child(3):hover{
+            background-color: blue;
+        }
+        .wrap{
+            width: 300px;
+            height: 400px;
+            display: inline-block;
+            background-color: beige;
+            border: 3px solid black;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div id="blue" class="blue" onclick="come()">
-            <h3>blue</h3>
-            <div id="item" class="item" onclick="hide()">
-                <p>OneTwo</p>
+        <div class="item">
+            <h4>테스트 창</h4>
+            <ul class="list">
+                <li onclick="block()"><a href="#"></a>First</li>
+                <li><a href="#"></a>Second</li>
+                <li><a href="#"></a>Third</li>
+            </ul>
+            <div class="wrap">
+                <div id="First" class="wrap-type"></div>
+                <div class="wrap">
+                    <div class="wrap-type"></div>
+                    <div class="wrap">
+                        <div class="wrap-type"></div>
             </div>
         </div>
     </div>
     <script>
-        function hide() {
-            document.getElementById('item').style.backgroundColor = 'blue'
-        }
-        function come() {
-            document.getElementById('blue').style.backgroundColor = 'red'
+        function block() {
+            document.getElementById('First').style.display = 'none'
+            document.getElementById('First').style.background = 'green'
         }
     </script>
 </body>
