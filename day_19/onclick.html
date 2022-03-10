@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .blue{
+            width: 150px;
+            height: 100px;
+            background-color: blue;
+            cursor: pointer;
+        }
+        h3{
+            text-align: center;
+            padding: 35px;
+        }
+        .item{
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+        button{
+            padding: 20px;
+            margin: 100px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="blue" class="blue" onclick="come()">
+            <h3>blue</h3>
+            <div id="item" class="item" onclick="hide()">
+                <p>OneTwo</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function hide() {
+            document.getElementById('item').style.backgroundColor = 'blue'
+        }
+        function come() {
+            document.getElementById('blue').style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>
