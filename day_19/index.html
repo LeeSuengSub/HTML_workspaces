@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .blue{
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+        .red{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            cursor: pointer;
+        }
+        button{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- javascript를 이용한 css 컨트롤 -->
+    <div class="container">
+        <!-- onclick : javascript에 정의한 함수이름 위치 -->
+        <!-- onclick : 클릭 시 함수 호출 -->
+        <div id="blue" class="blue" onclick="changeColor()"></div>
+        <div id="red" class="red" onclick="hide()"></div>
+        <div class="clear" onclick="setInitalization()">
+            <button>All CLEAR</button>
+        </div>
+        <div class="form">
+            <!-- onkkeyup은 눌러다가 뗐을때 반응 -->
+            <input id="userPassword" type="password" value="" />
+            <!-- userPassword2 : 비밀번호 체크하는 input 태그 -->
+            <input id="userPassword2" type="password" value="" onkeyup="checkUserId()" />
+        </div>
+    </div>
+    <script>
+        function checkUserId() {
+            var password = document.getElementById('userPassword').value;
+            var password2 = document.getElementById('userPassword2').value
+            if(password == password2) {
+                confirm('비밀번호가 일치합니다.')
+            }
+        }
+        console.log(userId)
+
+        //함수(메소드)
+        //javaScript 함수는 리턴타입이 없다.
+        function changeColor() {
+            //바닐라 스크립트 문법
+            var color = document.getElementById('blue').style.backgroundColor
+            if(color == 'black') {
+                alert('이미 배경색깔은 검은색입니다.')
+                return 0;
+            }
+            document.getElementById('blue').style.backgroundColor = 'black';
+            var color = document.getElementById('blue').style.backgroundColor = 'black'
+            console.log(color);
+        }
+        //함수이름은 항상 동사! 명사X
+        function hide() {
+            document.getElementById('blue').style.display = 'none'
+        }
+        function setInitalization() {
+            document.getElementById('blue').style.backgroundColor = 'blue';
+            document.getElementById('blue').style.display = 'block'
+        }
+    </script>
+</body>
+</html>
