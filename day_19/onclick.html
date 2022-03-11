@@ -11,73 +11,165 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .container{
-            width: 80%;
-            height: 600px;
-            margin: 0 auto 0;
-            border: 3px solid white;
-        }
-        .item{
-            width: 60%;
-            height: 600px;
-            margin: 0 auto 0;
-            border: 3px solid black;
-        }
-        .item ul{
-            text-align: center;
-            display: inline-block;
-            width: 200px;
-            list-style: none;
-            background-color: white;
-        }
-        .item ul li{
-            display: inline-block;
-            text-align: center;
+    .container{
+        height: 800px;
+        width: 100%;
+        background-color: slateblue;
+        padding: 20px;
+    }
+    .item{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        /* border: 5px solid black; */
+        /* background-color: yellowgreen; */
+    }
+    .popup{
+        position: fixed;
+        display: none;
+        width: 500px;
+        height: 400px;
+        top: 50px;
+        left: 35%;
+        border: 5px solid red;
+        background-color: gray;
+    }
+    .close{
+        width: 30px;
+        height: 30px;
+        /* border: 3px solid black; */
+        padding: 5px;
+    }
+    .close h2{text-align: center;
+        cursor: pointer;
+    }
+    .wrap{
             width: 100%;
-            height: 50px;
-            border: 3px solid black;
-            transition: 0.9s;
-            cursor: pointer;
-            border-left: 5px solid salmon;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .item ul li:nth-child(2):hover{
-            background-color: red;
+        /* 파도 css */
+        .circle{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border: 7px solid #464343;
+            border-radius: 100%;
+            background: linear-gradient(#3c5aff,#52f2fd);
+            transform: translate3d(0,0,0);
         }
-        .item ul li:nth-child(3):hover{
-            background-color: blue;
+        .wave-1{
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            top: -45%;
+            left: -30%;
+            border-radius: 45%;
+            background: rgba(3,169,244,0.8);
+            animation: move 3s linear infinite;
         }
-        .wrap{
-            width: 300px;
-            height: 400px;
-            display: inline-block;
-            background-color: beige;
-            border: 3px solid black;
+        .wave-2{
+            position: absolute;
+            width: 165px;
+            height: 165px;
+            top: -60%;
+            left: -30%;
+            border-radius: 45%;
+            background: rgba(34,79,242,0.8);
+            animation: move 5s linear infinite;
+        }
+        .wave-3{
+            position: absolute;
+            width: 165px;
+            height: 165px;
+            top: -100%;
+            left: -30%;
+            border-radius: 45%;
+            background:linear-gradient(#1d074b,#4C1EAD) ;
+            border: 6px solid rgba(131,119,152,0.7);
+            animation: move 7s linear infinite;
+        }
+        .wave-4{
+            position: absolute;
+            width: 165px;
+            height: 165px;
+            top: -100%;
+            left: -30%;
+            border-radius: 46%;
+            background: linear-gradient(rgba(252,251,232,0.1) 10%, transparent);
+            animation: move 7s linear infinite;
+        }
+        @keyframes move{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        /* 달 css */
+        .sub-harf{
+            position: absolute;
+            top: 45%;
+            left: 23%;
+            font-size: 36px;
+            border-radius: 50%;
+            color: rgba(255,255,255,0.8);
+            animation: moon-rotate 4s linear infinite;
+        }
+        .sub-harf-blur{
+            filter: blur(10px);
+            -webkit-filter: blur(10px);
+        }
+        @keyframes moon-rotate{
+            0%, 100%{
+                transform: rotate(10deg);
+            }
+            50%{
+                transform: rotate(-10deg);
+            }
+        }
+        /* 별 */
+        .whale{
+            position: absolute;
+            top: 28px;
+            left: 20px;
+        }
+        .whale img{
+            animation: whale 5s linear infinite;
+        }
+        @keyframes whale {
+            0%,100%{
+                transform: rotateY(0deg);
+            }
+            50%{
+                transform: rotateY(180deg);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item">
-            <h4>테스트 창</h4>
-            <ul class="list">
-                <li onclick="block()"><a href="#"></a>First</li>
-                <li><a href="#"></a>Second</li>
-                <li><a href="#"></a>Third</li>
-            </ul>
-            <div class="wrap">
-                <div id="First" class="wrap-type"></div>
+            <div class="item">
                 <div class="wrap">
-                    <div class="wrap-type"></div>
-                    <div class="wrap">
-                        <div class="wrap-type"></div>
+                    <div class="circle">
+                        <!-- circle -->
+                        <div class="wave-1"></div>
+                        <div class="wave-2"></div>
+                        <div class="wave-3"></div>
+                        <div class="wave-4"></div>
+                        
+                        <!-- moon -->
+                        <i class="sub-harf"></i>
+                        <i class="sub-harf-blur"></i>
+                        
+                        <!-- whale -->
+                        <div class="whale">
+                            <img src="pngwing.com.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </div>
-    <script>
-        function block() {
-            document.getElementById('First').style.display = 'none'
-            document.getElementById('First').style.background = 'green'
-        }
-    </script>
 </body>
 </html>
