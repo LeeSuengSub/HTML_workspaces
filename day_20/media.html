@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid black;
+            margin: 500px auto;
+            width: 100%;
+            height: 450px;
+        }
+        .item{
+            flex-basis: 30%;
+            background-color: dodgerblue;
+            border: 3px solid red;
+        }
+        /* 어노테이션 */
+        /* 반응형 웹 */
+        /* flex& grid가 반응형에 편함. */
+        @media (max-width : 700px){
+            .row{
+                flex-direction: column;
+            }
+        }
+        header{
+            width: 100%;
+            height: 150px;
+            border: 2px solid black;
+        }
+        header li{
+            font-size: 40px;
+            cursor: pointer;
+            border: 1px solid black;
+            width: 120px;
+        }
+        .box{
+            position: fixed;
+            border-radius: 45%;
+            bottom: 10px;
+            right: 10px;
+            width: 70px;
+            height: 70px;
+            background-color: sandybrown;
+            cursor: pointer;
+        }
+        .box h3{
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ul>
+                <li onclick="doScroll()">HOME</li>
+            </ul>
+        </header>
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="box" onclick="doUp()">
+        <h3>↑</h3></div>
+    </div>
+    <script>
+        function doScroll(){
+            window.scrollTo({ top: 500, behavior: "smooth"})
+        }
+        function doUp() {
+            window.scrollTo({top : 0, behavior: "smooth"})
+        }
+    </script>
+</body>
+</html>
