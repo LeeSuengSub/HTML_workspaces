@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
         *{
             margin: 0;
@@ -12,14 +14,14 @@
             box-sizing: border-box;
         }
         ::-webkit-scrollbar{
+            width: 10px;
             background-color: grey;
         }
         ::-webkit-scrollbar-thumb{
             background-color: black;
-            border-radius: 10px;
         }
         header{
-            background-color: slateblue;
+            background-color: #caa6fe;
             position: relative;
             height: 600px;
             width: 100%;
@@ -27,6 +29,7 @@
         }
         .logo{
             padding: 2%;
+            cursor: pointer;
         }
         .nav{
             display: flex;
@@ -119,18 +122,19 @@
         .title{
             position: absolute;
             left: 40%;
+            margin-bottom: 20px;
         }
         .title h1{
             text-align: center;
-            font-size: 30px;
+            font-size: 50px;
         }
         .title span{
-            font-size: 40px;
+            font-size: 30px;
         }
         .nav-link ul li{
             list-style: none;
             display: inline-block;
-            padding: 8px 12px;
+            padding: 0px 12px;
             font-size: 30px;
             font-weight: 600;
             cursor: pointer;
@@ -139,7 +143,7 @@
             /* border: 1px solid red; */
         }
         .nav-link ul li:hover{
-            background-color: red;
+            background-color: orangered;
         }
         .class{
             position: absolute;
@@ -149,8 +153,8 @@
             text-align: center;
         }
         .github-img img{
-            width: 500px;
-            height: 300px;
+            width: 550px;
+            height: 350px;
             border-radius: 10px;
         }
         .github-link{
@@ -173,37 +177,37 @@
         .header-sql{
             width: 100%;
             height: 50px;
-            background: linear-gradient(slateblue,blue);
+            background: linear-gradient(#caa6fe,#b5c7ed);
         }
         .SQL{
             width: 100%;
             height: 700px;
-            background-color: blue;
+            background-color: #b5c7ed;
         }
         .sql-java{
             width: 100%;
             height: 50px;
-            background: linear-gradient(blue,red);
+            background: linear-gradient(#b5c7ed,#C3B5ED);
         }
         .Java{
             width: 100%;
             height: 700px;
-            background-color: red;
+            background-color: #C3B5ED;
         }
         .java-html{
             width: 100%;
             height: 50px;
-            background: linear-gradient(red,yellow);
+            background: linear-gradient(#C3B5ED,#E0B5ED);
         }
         .HTML{
             width: 100%;
             height: 700px;
-            background-color: yellow;
+            background-color: #E0B5ED;
         }
         .html-javascript{
             width: 100%;
             height: 50px;
-            background: linear-gradient(yellow,pink);
+            background: linear-gradient(#E0B5ED,pink);
         }
         .JavaScript{
             width: 100%;
@@ -251,7 +255,7 @@
                 </div>
                 <div class="nav-link">
                     <ul>
-                        <li>SQL</a></li>
+                        <li onclick="goSql()">SQL</a></li>
                         <li>JAVA</li>
                         <li>HTML</li>
                         <li>JavaScript</li>
@@ -270,20 +274,23 @@
         </header>
         <section>
             <div class="header-sql"></div>
-            <div class="SQL">
-                <h3>SQL</h3>
+            <div class="SQL" >
+                <h1>SQL</h1>
+                <button>
+                    <a href='mailto:zlzm2522@gmail.com'>send mail</a>
+                  </button>
             </div>
             <div class="sql-java"></div>
             <div class="Java">
-                <h3>JAVA</h3>
+                <h1>JAVA</h1>
             </div>
             <div class="java-html"></div>
             <div class="HTML">
-                <h3>HTML</h3>
+                <h1>HTML</h1>
             </div>
             <div class="html-javascript"></div>
             <div class="JavaScript">
-                <h3>JavaScript</h3>
+                <h1>JavaScript</h1>
             </div>
         </section>
         <div class="scroll-up" onclick="doUp()">
@@ -293,6 +300,9 @@
     <script>
         function doUp() {
             window.scrollTo({top : 0, behavior:'smooth'})
+        }
+        function goSql() {
+            window.scrollTo({top : 640, behavior : 'smooth'})
         }
     </script>
 </body>
