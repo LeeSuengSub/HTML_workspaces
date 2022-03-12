@@ -11,6 +11,13 @@
             padding: 0;
             box-sizing: border-box;
         }
+        ::-webkit-scrollbar{
+            background-color: grey;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: black;
+            border-radius: 10px;
+        }
         header{
             background-color: slateblue;
             position: relative;
@@ -18,9 +25,11 @@
             width: 100%;
             /* border: 5px solid black; */
         }
+        .logo{
+            padding: 2%;
+        }
         .nav{
             display: flex;
-            padding: 2% 4%;
             justify-content: space-between;
             align-items: center;
         }
@@ -107,6 +116,17 @@
                 transform: rotateY(-180deg);
             }
         }
+        .title{
+            position: absolute;
+            left: 40%;
+        }
+        .title h1{
+            text-align: center;
+            font-size: 30px;
+        }
+        .title span{
+            font-size: 40px;
+        }
         .nav-link ul li{
             list-style: none;
             display: inline-block;
@@ -150,10 +170,57 @@
             background-color: red;
             transition: 800ms;
         }
-        section{
+        .header-sql{
             width: 100%;
-            height: 500px;
+            height: 50px;
+            background: linear-gradient(slateblue,blue);
+        }
+        .SQL{
+            width: 100%;
+            height: 700px;
             background-color: blue;
+        }
+        .sql-java{
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(blue,red);
+        }
+        .Java{
+            width: 100%;
+            height: 700px;
+            background-color: red;
+        }
+        .java-html{
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(red,yellow);
+        }
+        .HTML{
+            width: 100%;
+            height: 700px;
+            background-color: yellow;
+        }
+        .html-javascript{
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(yellow,pink);
+        }
+        .JavaScript{
+            width: 100%;
+            height: 700px;
+            background-color: pink;
+        }
+        .scroll-up{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            font-size: 30px;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -161,7 +228,7 @@
     <div class="container">
         <header>
             <div class="nav">
-                <div class="log">
+                <div class="logo">
                     <div class="item">
                         <div class="wrap">
                             <div class="circle">
@@ -178,6 +245,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="title">
+                    <h1>Hello World <br><span> Hello SuengSub</span></h1>
                 </div>
                 <div class="nav-link">
                     <ul>
@@ -199,8 +269,31 @@
             </div>
         </header>
         <section>
-
+            <div class="header-sql"></div>
+            <div class="SQL">
+                <h3>SQL</h3>
+            </div>
+            <div class="sql-java"></div>
+            <div class="Java">
+                <h3>JAVA</h3>
+            </div>
+            <div class="java-html"></div>
+            <div class="HTML">
+                <h3>HTML</h3>
+            </div>
+            <div class="html-javascript"></div>
+            <div class="JavaScript">
+                <h3>JavaScript</h3>
+            </div>
         </section>
+        <div class="scroll-up" onclick="doUp()">
+            <h3>↑</h3>
+        </div>
     </div>
+    <script>
+        function doUp() {
+            window.scrollTo({top : 0, behavior:'smooth'})
+        }
+    </script>
 </body>
 </html>
