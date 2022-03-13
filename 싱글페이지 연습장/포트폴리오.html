@@ -226,6 +226,88 @@
             border-radius: 20px;
             cursor: pointer;
         }
+        /* SQL */
+        .sql-container .row{
+            display: flex;
+            margin: 10px auto;
+            width: 90%;
+            height: 600px;
+            border: 3px solid black;
+        }
+        .sql-container .item{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 20%;
+        }
+        .sql-container .tab{
+            flex-basis: 25%;
+            border: 3px solid black;
+            cursor: pointer;
+        }
+        .sql-container .tab h2{
+            text-align: center;
+        }
+        .sql-container .content{
+            flex-basis: 80%;
+            color: black;
+            text-align: center;
+        }
+        .sql-container #b{
+            display: none;
+        }
+        .sql-container #c{
+            display: none;
+        }
+        .sql-container #d{
+            display: none;
+        }
+        .sql-graph{
+            margin-top: 80px;
+            position: relative;
+            padding: 2%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            grid-gap: 30px;
+        }
+        .sql-graph-doughnut{
+            background-color: mediumaquamarine;
+            width: 100%;
+            height: auto;
+            padding: 6% 3%;
+            border-radius: 20px;
+        }
+        .sql-graph-doughnut h2{
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 3%;
+        }
+        .sql-graph-doughnut p{
+            text-align: left;
+            width: 60%;
+        }
+        .sql-graph-doughnut .chart{
+            border-top: 4px solid orangered;
+        }
+        .sql-graph-doughnut .percent{
+            position: absolute;
+            left: 10%;
+            bottom: 34%;
+        }
+        .sql-graph-doughnut .percent-level2{
+            position: absolute;
+            left: 35%;
+            bottom: 34%;
+        }
+        .sql-graph-doughnut .percent-level3{
+            position: absolute;
+            bottom: 34%;
+            right: 35.5%;
+        }
+        .sql-graph-doughnut .percent-level4{
+            position: absolute;
+            right: 11%;
+            bottom: 34%;
+        }
     </style>
 </head>
 <body>
@@ -276,10 +358,72 @@
             <div class="header-sql"></div>
             <div class="SQL" >
                 <h1>SQL</h1>
+                <div class="sql-container">
+                    <h1>프로그래머스-MySQL</h1>
+                    <div class="row">
+                        <div class="item">
+                            <div class="tab" onclick="setTab1()"><h2>SQL 요약</h2></div>
+                            <div class="tab" onclick="setTab2()"><h2>Level 1</h2></div>
+                            <div class="tab" onclick="setTab3()"><h2>Level 2</h2></div>
+                            <div class="tab" onclick="setTab4()"><h2>Level 3</h2></div>
+                        </div>
+                        <div id="a" class="content">
+                            <div class="sql-graph">
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 1</h2>
+                                    <p>문제수 : 10/10</p>
+                                    <p>달성률 : 100%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart"></canvas>
+                                        <div class="percent">
+                                            <h1>100%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 2</h2>
+                                    <p>문제수 : 11/11</p>
+                                    <p>달성률 : 100%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart2"></canvas>
+                                        <div class="percent-level2">
+                                            <h1>100%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 3</h2>
+                                    <p>문제수 : 4/5</p>
+                                    <p>달성률 : 80%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart3"></canvas>
+                                        <div class="percent-level3">
+                                            <h1>80%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 4</h2>
+                                    <p>문제수 : 0/3</p>
+                                    <p>달성률 : 0%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart4"></canvas>
+                                        <div class="percent-level4">
+                                            <h1>0%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="b" class="content"><p>내용 2</p></div>
+                        <div id="c" class="content"><p>내용 3</p></div>
+                        <div id="d" class="content"><p>내용 4</p></div>
+                    </div>
+                </div>
             </div>
             <div class="sql-java"></div>
             <div class="Java">
-                <h1>JAVA</h1>
+                <h1>JAVA&JavaScript</h1>
             </div>
             <div class="java-html"></div>
             <div class="HTML">
@@ -287,7 +431,7 @@
             </div>
             <div class="html-javascript"></div>
             <div class="JavaScript">
-                <h1>JavaScript</h1>
+                <h1></h1>
             </div>
         </section>
         <div class="scroll-up" onclick="doUp()">
@@ -301,6 +445,81 @@
         function goSql() {
             window.scrollTo({top : 640, behavior : 'smooth'})
         }
+        function setTab1() {
+            document.getElementById('a').style.display = 'block'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab2() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'block'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab3() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'block'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab4() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'block'
+        }
+        // SQL- CHART
+        const DATA_SETTING = {
+            datasets: [{
+                label : 'Level 1',
+                data : [100],
+                backgroundColor: ['white'],
+            },],
+        };
+        const DATA_SETTING2 = {
+            datasets: [{
+                label : 'level 2',
+                data : [100],
+                backgroundColor : ['white'],
+            },],
+        };
+        const DATA_SETTING3 = {
+            datasets: [{
+                label : 'level 3',
+                data : [20,80],
+                backgroundColor : ['grey','white'],
+            },],
+        };
+        const DATA_SETTING4 = {
+            datasets:[{
+                label : 'level 4',
+                data : [100],
+                backgroundColor : ['grey'],
+            },],
+        };
+
+        const MY_CHART_DATA = {
+            type : 'doughnut',
+            data : DATA_SETTING
+        };
+        const MY_CHART_DATA2 = {
+            type : 'doughnut',
+            data : DATA_SETTING2
+        };
+        const MY_CHART_DATA3 = {
+            type : 'doughnut',
+            data : DATA_SETTING3
+        };
+        const MY_CHART_DATA4 = {
+            type : 'doughnut',
+            data : DATA_SETTING4
+        };
+
+        new Chart(document.getElementById('myChart'),MY_CHART_DATA)
+        new Chart(document.getElementById('myChart2'),MY_CHART_DATA2)
+        new Chart(document.getElementById('myChart3'),MY_CHART_DATA3)
+        new Chart(document.getElementById('myChart4'),MY_CHART_DATA4)
     </script>
 </body>
 </html>
