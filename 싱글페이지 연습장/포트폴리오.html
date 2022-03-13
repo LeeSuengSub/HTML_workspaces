@@ -243,15 +243,18 @@
             width: 90%;
             height: 600px;
             border: 3px solid black;
+            background-color: antiquewhite;
         }
         .sql-container .item{
             display: flex;
             flex-direction: column;
             flex-basis: 20%;
+            background-color: black;
+            color: white;
         }
         .sql-container .tab{
             flex-basis: 25%;
-            border: 3px solid black;
+            border: 3px solid white;
             cursor: pointer;
         }
         .sql-container .tab h2{
@@ -322,7 +325,7 @@
         .content-Level{
             width: 100%;
             height: 90%;
-            border: 3px solid red;
+            /* border: 3px solid red; */
         }
         .sql-title{
             text-align: center;
@@ -334,10 +337,10 @@
             grid-template-columns: repeat(auto-fit,190px);
             gap: 20px;
             padding: 20px;
-            cursor: pointer;
         }
         .content .Level1-post{
             border: 3px solid slateblue;
+            cursor: pointer;
             border-radius: 4px;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
             transform: scale(1);
@@ -360,8 +363,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit,155px);
             gap: 20px;
-            padding: 6px;
-            cursor: pointer;
+            padding: 20px;
         }
         .content .Level2-post{
             border: 3px solid slateblue;
@@ -369,6 +371,7 @@
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
             transform: scale(1);
             transition: 1s;
+            cursor: pointer;
             /* background-color: ; */
         }
         .content .Level2-post:hover{
@@ -388,10 +391,10 @@
             grid-template-columns: repeat(auto-fit,300px);
             gap: 30px;
             padding: 20px;
-            cursor: pointer;
         }
         .content .Level3-post{
             border: 3px solid slateblue;
+            cursor: pointer;
             border-radius: 4px;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
             transform: scale(1);
@@ -515,6 +518,9 @@
                             </div>
                         </div>
                         <div id="b" class="content">
+                            <div class="Level1-title">
+                                <h1>Level 1</h1>
+                            </div>
                             <div class="content-Level">
                             <div class="Level-wrapper">
                                 <div class="Level1-post">
@@ -581,6 +587,9 @@
                             </div>
                         </div>
                         <div id="c" class="content">
+                            <div class="Level2-title">
+                                <h1>Level 2</h1>
+                            </div>
                             <div class="content-Level">
                                 <div class="Level2-wrapper">
                                     <div class="Level2-post">
@@ -653,6 +662,9 @@
                             </div>
                         </div>
                         <div id="d" class="content">
+                            <div class="Level-title">
+                                <h1>Level 3</h1>
+                            </div>
                             <div class="content-Level">
                                 <div class="Level3-wrapper">
                                     <div class="Level3-post">
