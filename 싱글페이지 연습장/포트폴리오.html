@@ -8,13 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
+        @font-face {
+            font-family: 'ONE-Mobile-POP';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         ::-webkit-scrollbar{
-            width: 10px;
+            width: 8px;
             background-color: grey;
         }
         ::-webkit-scrollbar-thumb{
@@ -121,6 +127,7 @@
         }
         .title{
             position: absolute;
+            font-family: 'ONE-Mobile-POP';
             left: 40%;
             margin-bottom: 20px;
         }
@@ -227,6 +234,9 @@
             cursor: pointer;
         }
         /* SQL */
+        .sql-container h3{
+            padding: 8px 0 0 0;
+        }
         .sql-container .row{
             display: flex;
             margin: 10px auto;
@@ -308,6 +318,88 @@
             right: 11%;
             bottom: 34%;
         }
+        .content-Level{
+            width: 100%;
+            height: 90%;
+            border: 3px solid red;
+        }
+        .content .Level-wrapper{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,190px);
+            gap: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .content .Level1-post{
+            border: 3px solid slateblue;
+            border-radius: 4px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
+            transform: scale(1);
+            transition: 1s;
+            /* background-color: ; */
+        }
+        .content .Level1-post:hover{
+            transform: scale(1.10);
+        }
+        .content .Level1-post img{
+            width: 185px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .content .post-preview{
+            /* background-color: ; */
+            padding: 5%;
+        }
+        .content .Level2-wrapper{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,155px);
+            gap: 20px;
+            padding: 6px;
+            cursor: pointer;
+        }
+        .content .Level2-post{
+            border: 3px solid slateblue;
+            border-radius: 4px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
+            transform: scale(1);
+            transition: 1s;
+            /* background-color: ; */
+        }
+        .content .Level2-post:hover{
+            transform: scale(1.10);
+        }
+        .content .Level2-post img{
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .Level2-preview h5{
+            text-align: center;
+            font-weight: 800;
+        }
+        .content .Level3-wrapper{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,300px);
+            gap: 30px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .content .Level3-post{
+            border: 3px solid slateblue;
+            border-radius: 4px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
+            transform: scale(1);
+            transition: 1s;
+            /* background-color: ; */
+        }
+        .content .Level3-post:hover{
+            transform: scale(1.10);
+        }
+        .content .Level3-post img{
+            width: 295px;
+            height: 200px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -338,9 +430,8 @@
                 <div class="nav-link">
                     <ul>
                         <li onclick="goSql()">SQL</a></li>
-                        <li>JAVA</li>
+                        <li onclick="goJava()">JAVA&JavaScript</li>
                         <li>HTML</li>
-                        <li>JavaScript</li>
                     </ul>
                 </div>
             </div>
@@ -359,7 +450,7 @@
             <div class="SQL" >
                 <h1>SQL</h1>
                 <div class="sql-container">
-                    <h1>프로그래머스-MySQL</h1>
+                    <h3>프로그래머스-MySQL</h3>
                     <div class="row">
                         <div class="item">
                             <div class="tab" onclick="setTab1()"><h2>SQL 요약</h2></div>
@@ -415,9 +506,174 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="b" class="content"><p>내용 2</p></div>
-                        <div id="c" class="content"><p>내용 3</p></div>
-                        <div id="d" class="content"><p>내용 4</p></div>
+                        <div id="b" class="content">
+                            <div class="content-Level">
+                            <div class="Level-wrapper">
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/모든 레코드 조회하기.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>모든 레코드 조회하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/최댓값 구하기.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>최댓값 구하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/이름이 없는 동물의 아이디.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>이름이 없는 동물의 아이디</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/역순 정렬하기.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>역순 정렬하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/이름이 있는 동물의 아이디.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>이름이 있는 동물의 아이디</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/아픈 동물 찾기.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>아픈 동물 찾기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/어린 동물 찾기.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>어린 동물 찾기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/동물의 아이디와 이름.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>동물의 아이디와 이름</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/여러 기준으로 정렬하기.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>여러 기준으로 정렬하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="../img/SQL/Level_1/상위 n개 레코드.PNG" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>상위 n개 레코드</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div id="c" class="content">
+                            <div class="content-Level">
+                                <div class="Level2-wrapper">
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/고양이와 개는 몇마리 있을까.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>고양이와 개는 <br> 몇마리 있을까</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/루시와 엘라 찾기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>루시와 엘라 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/최솟값 구하기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>최솟값 구하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/동명 동물 수 찾기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>동명 동물 수 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/이름에 el이 들어가는 동물 찾기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>이름에 el이 들어가는 <br> 동물 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/동물 수 구하기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>동물 수 구하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/입양 시각 구하기(1).PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>입양 시각 구하기(1)</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/NULL 처리하기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>NULL 처리하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/중성화 여부 파악하기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>중성화 여부 파악하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/중복 제거하기.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>중복 제거하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="../img/SQL/Level_2/DATETIME에서 DATE로 형 변환.PNG" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>DATETIME에서 <br> DATE로 형 변환</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="d" class="content">
+                            <div class="content-Level">
+                                <div class="Level3-wrapper">
+                                    <div class="Level3-post">
+                                        <img src="../img/SQL/Level_3/없어진 기록 찾기.PNG" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>없어진 기록 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level3-post">
+                                        <img src="../img/SQL/Level_3/있었는데요 없었습니다.PNG" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>있었는데요 없었습니다</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level3-post">
+                                        <img src="../img/SQL/Level_3/오랜 기간 보호한 동물(1).PNG" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>오랜 기간 보호한 동물(1)</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level3-post">
+                                        <img src="../img/SQL/Level_3/헤비 유저가 소유한 장소.PNG" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>헤비 유저가 소유한 장소</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -443,7 +699,10 @@
             window.scrollTo({top : 0, behavior:'smooth'})
         }
         function goSql() {
-            window.scrollTo({top : 640, behavior : 'smooth'})
+            window.scrollTo({top : 655, behavior : 'smooth'})
+        }
+        function goJava() {
+            window.scrollTo({top : 1400, behavior : 'smooth'})
         }
         function setTab1() {
             document.getElementById('a').style.display = 'block'
