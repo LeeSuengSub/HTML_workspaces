@@ -285,6 +285,7 @@
             height: auto;
             padding: 6% 3%;
             border-radius: 20px;
+            box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.85);
         }
         .sql-graph-doughnut h2{
             font-size: 30px;
@@ -322,6 +323,11 @@
             width: 100%;
             height: 90%;
             border: 3px solid red;
+        }
+        .sql-title{
+            text-align: center;
+            font-weight: 800;
+            font-size: 40px;
         }
         .content .Level-wrapper{
             display: grid;
@@ -450,7 +456,6 @@
             <div class="SQL" >
                 <h1>SQL</h1>
                 <div class="sql-container">
-                    <h3>프로그래머스-MySQL</h3>
                     <div class="row">
                         <div class="item">
                             <div class="tab" onclick="setTab1()"><h2>SQL 요약</h2></div>
@@ -459,6 +464,9 @@
                             <div class="tab" onclick="setTab4()"><h2>Level 3</h2></div>
                         </div>
                         <div id="a" class="content">
+                            <div class="sql-title">
+                                <h1>프로그래머스-MySQL</h1>
+                            </div>
                             <div class="sql-graph">
                                 <div class="sql-graph-doughnut">
                                     <h2>Level 1</h2>
