@@ -409,6 +409,53 @@
             height: 200px;
             object-fit: cover;
         }
+        .backend-container{
+            width: 90%;
+            height: 600px;
+            border: 3px solid black;
+            margin: 20px auto 0;
+        }
+        .backend-wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        .java-container{
+            width: 45%;
+            height: 590px;
+            border: 2px solid red;
+        }
+        .java-title{
+            border: 2px solid red;
+        }
+        .javascript-container{
+            width: 45%;
+            height: 590px;
+            border: 1px solid blue;
+        }
+        .javascript-title{
+            border: 2px solid blue;
+        }
+        .java-wrap{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,250px);
+            gap: 20px;
+            padding: 30px;
+        }
+        .java-post{
+            width: 260px;
+            height: 155px;
+            /* border: 2px solid red; */
+            cursor: pointer;
+            transform: scale(1);
+            transition: 0.5s;
+        }
+        .java-post img{
+            width: 255px;
+            height: 150px;
+        }
+        .java-post:hover{
+            transform: scale(1.10);
+        }
     </style>
 </head>
 <body>
@@ -440,7 +487,7 @@
                     <ul>
                         <li onclick="goSql()">SQL</a></li>
                         <li onclick="goJava()">JAVA&JavaScript</li>
-                        <li>HTML</li>
+                        <li onclick="goHtlm()">HTML</li>
                     </ul>
                 </div>
             </div>
@@ -701,6 +748,59 @@
 
             <div class="Java">
                 <h1>JAVA&JavaScript</h1>
+                <div class="backend-container">
+                    <div class="backend-wrap">
+                        <div class="java-container">
+                            <div class="java-title">
+                                <h3>JAVA</h3>
+                            </div>
+                            <div class="java-wrap">
+                                <div class="java-post">
+                                    <img src="../img/자바/서울에서 김서방 찾기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>서울에서 김서방 찾기</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="../img/자바/약수의 합.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>약수의 합</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="../img/자바/짝수와 홀수.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>짝수와 홀수</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="../img/자바/평균 구하기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>평균 구하기</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="../img/자바/핸드폰 번호 가리기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>핸드폰 번호 가리기</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="../img/자바/직사각형 별찍기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>직사각형 별찍기</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="javascript-container">
+                            <div class="javascript-title">
+                                <h3>JavaScript</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="java-html"></div>
 
@@ -722,10 +822,13 @@
             window.scrollTo({top : 0, behavior:'smooth'})
         }
         function goSql() {
-            window.scrollTo({top : 655, behavior : 'smooth'})
+            window.scrollTo({top : 650, behavior : 'smooth'})
         }
         function goJava() {
             window.scrollTo({top : 1400, behavior : 'smooth'})
+        }
+        function goHtlm() {
+            window.scrollTo({top : 2150, behavior : 'smooth'})
         }
         function setTab1() {
             document.getElementById('a').style.display = 'block'
