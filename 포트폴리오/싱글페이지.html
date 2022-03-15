@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="싱글페이지.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <div class="logo">
+                    <div class="item">
+                        <div class="wrap">
+                            <div class="circle">
+                                <!-- circle -->
+                                <div class="wave-1"></div>
+                                <div class="wave-2"></div>
+                                <div class="wave-3"></div>
+                                <div class="wave-4"></div>
+                                
+                                <!-- whale -->
+                                <div class="whale">
+                                    <img src="싱글페이지_img/pngwing.com.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title">
+                    <h1>Hello World <br><span> Hello SuengSub</span></h1>
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li onclick="goSql()">SQL</a></li>
+                        <li onclick="goJava()">JAVA&JavaScript</li>
+                        <li onclick="goHtlm()">HTML</li>
+                        <li onclick="goMadeBy()">Made By</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="class">
+                <div class="github-img">
+                    <!-- 사진은 화요일에 변경할것. -->
+                    <img src="싱글페이지_img/깃허브_22.03.15.png" alt="">
+                </div>
+                <div class="github-link">
+                    <a href="https://github.com/LeeSuengSub">깃허브 이동하기</a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="header-sql"></div>
+            <div class="SQL" >
+                <h1>SQL</h1>
+                <div class="sql-container">
+                    <div class="row">
+                        <div class="item">
+                            <div class="tab" onclick="setTab1()"><h2>SQL 요약</h2></div>
+                            <div class="tab" onclick="setTab2()"><h2>Level 1</h2></div>
+                            <div class="tab" onclick="setTab3()"><h2>Level 2</h2></div>
+                            <div class="tab" onclick="setTab4()"><h2>Level 3</h2></div>
+                        </div>
+                        <div id="a" class="content">
+                            <div class="sql-title">
+                                <h1>프로그래머스-MySQL</h1>
+                            </div>
+                            <div class="sql-graph">
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 1</h2>
+                                    <p>문제수 : 10/10</p>
+                                    <p>달성률 : 100%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart"></canvas>
+                                        <div class="percent">
+                                            <h1>100%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 2</h2>
+                                    <p>문제수 : 11/11</p>
+                                    <p>달성률 : 100%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart2"></canvas>
+                                        <div class="percent-level2">
+                                            <h1>100%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 3</h2>
+                                    <p>문제수 : 4/5</p>
+                                    <p>달성률 : 80%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart3"></canvas>
+                                        <div class="percent-level3">
+                                            <h1>80%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sql-graph-doughnut">
+                                    <h2>Level 4</h2>
+                                    <p>문제수 : 0/3</p>
+                                    <p>달성률 : 0%</p>
+                                    <div class="chart">
+                                        <canvas id="myChart4"></canvas>
+                                        <div class="percent-level4">
+                                            <h1>0%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="b" class="content">
+                            <div class="Level1-title">
+                                <h1>Level 1</h1>
+                            </div>
+                            <div class="content-Level">
+                            <div class="Level-wrapper">
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/모든 레코드 조회하기 - 수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>모든 레코드 조회하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/최댓값 구하기-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>최댓값 구하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/이름이 없는 동물의 아이디-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>이름이 없는 동물의 아이디</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/역순 정렬하기-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>역순 정렬하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/이름이 있는 동물의 아이디-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>이름이 있는 동물의 아이디</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/아픈 동물 찾기-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>아픈 동물 찾기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/어린 동물 찾기-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>어린 동물 찾기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/동물의 아이디와 이름-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>동물의 아이디와 이름</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/여러 기준으로 정렬하기-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>여러 기준으로 정렬하기</h5>
+                                    </div>
+                                </div>
+                                <div class="Level1-post">
+                                    <img src="싱글페이지_img/SQL/Level_1/상위 n개 레코드-수정본.png" alt="">
+                                    <div class="Level1-preview">
+                                        <h5>상위 n개 레코드</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div id="c" class="content">
+                            <div class="Level2-title">
+                                <h1>Level 2</h1>
+                            </div>
+                            <div class="content-Level">
+                                <div class="Level2-wrapper">
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/고양이와 개는 몇마리 있을까-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>고양이와 개는 <br> 몇마리 있을까</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/루시와 엘라 찾기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>루시와 엘라 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/최솟값 구하기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>최솟값 구하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/동명 동물 수 찾기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>동명 동물 수 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/이름에 el이 들어가는 동물 찾기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>이름에 el이 들어가는 <br> 동물 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/동물 수 구하기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>동물 수 구하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/입양 시각 구하기(1)-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>입양 시각 구하기(1)</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/NULL 처리하기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>NULL 처리하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/중성화 여부 파악하기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>중성화 여부 파악하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/중복 제거하기-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>중복 제거하기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level2-post">
+                                        <img src="싱글페이지_img/SQL/Level_2/DATETIME에서 DATE로 형 변환-수정본.png" alt="">
+                                        <div class="Level2-preview">
+                                            <h5>DATETIME에서 <br> DATE로 형 변환</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="d" class="content">
+                            <div class="Level-title">
+                                <h1>Level 3</h1>
+                            </div>
+                            <div class="content-Level">
+                                <div class="Level3-wrapper">
+                                    <div class="Level3-post">
+                                        <img src="싱글페이지_img/SQL/Level_3/없어진 기록 찾기-수정본.png" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>없어진 기록 찾기</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level3-post">
+                                        <img src="싱글페이지_img/SQL/Level_3/있었는데요 없었습니다-수정본.png" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>있었는데요 없었습니다</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level3-post">
+                                        <img src="싱글페이지_img/SQL/Level_3/오랜 기간 보호한 동물(1)-수정본.png" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>오랜 기간 보호한 동물(1)</h5>
+                                        </div>
+                                    </div>
+                                    <div class="Level3-post">
+                                        <img src="싱글페이지_img/SQL/Level_3/헤비 유저가 소유한 장소-수정본.png" alt="">
+                                        <div class="Level3-preview">
+                                            <h5>헤비 유저가 소유한 장소</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sql-java"></div>
+
+            <div class="Java">
+                <h1>JAVA&JavaScript</h1>
+                <div class="backend-container">
+                    <div class="backend-wrap">
+                        <div class="java-container">
+                            <div class="java-title">
+                                <h2>JAVA</h2>
+                            </div>
+                            <div class="java-wrap">
+                                <div class="java-post">
+                                    <img src="싱글페이지_img/자바/서울에서 김서방 찾기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>서울에서 김서방 찾기</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="싱글페이지_img/자바/약수의 합.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>약수의 합</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="싱글페이지_img/자바/짝수와 홀수.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>짝수와 홀수</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="싱글페이지_img/자바/평균 구하기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>평균 구하기</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="싱글페이지_img/자바/핸드폰 번호 가리기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>핸드폰 번호 가리기</h4>
+                                    </div>
+                                </div>
+                                <div class="java-post">
+                                    <img src="싱글페이지_img/자바/직사각형 별찍기.PNG" alt="">
+                                    <div class="java-preview">
+                                        <h4>직사각형 별찍기</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="javascript-container">
+                            <div class="javascript-title">
+                                <h2>JavaScript</h2>
+                            </div>
+                            <div class="javascript-wrap">
+                                <div class="javascript-post">
+                                    <img src="싱글페이지_img/자바스크립트/약수의 합.PNG" alt="">
+                                    <div class="javascript-preview">
+                                        <h4>약수의 합</h4>
+                                    </div>
+                                </div>
+                                <div class="javascript-post">
+                                    <img src="싱글페이지_img/자바스크립트/짝수와 홀수.PNG" alt="">
+                                    <div class="javascript-preview">
+                                        <h4>짝수와 홀수</h4>
+                                    </div>
+                                </div>
+                                <div class="javascript-post">
+                                    <img src="싱글페이지_img/자바스크립트/평균 구하기.PNG" alt="">
+                                    <div class="javascript-preview">
+                                        <h4>평균 구하기</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="java-html"></div>
+
+            <div class="HTML">
+                <h1>HTML</h1>
+                <div class="html-container">
+                    <div class="wrap">
+                        <div class="wrap-1">
+                            <div class="memory">
+                                <div class="html-img">
+                                    <img src="싱글페이지_img/HTML_img/1.카페_주문.png" alt="">
+                                    <div class="layer">
+                                        <h4>CSS배운날</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/2.첫_header_첫_footer.png" alt="">
+                                <div class="layer">
+                                    <h4>Header와 <br> footer</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/3.첫_카드레이아웃.png" alt="">
+                                <div class="layer">
+                                    <h4>카드 <br> 레이아웃_ver.1</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/4.flex_grow를 이용한 카드레이아웃.png" alt="">
+                                <div class="layer">
+                                    <h4>카드 <br> 레이아웃 <br> ver.flex-grow</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/5.header_카드레이아웃을_아용한_현대카드_사이트.png" alt="">
+                                <div class="layer">
+                                    <h4>현대카드 <br> 홈페이지 <br> 내맘대로 <br> 만들기</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-2">
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/6.margin,padding만으로_인스타그램_로고_만들기.png" alt="">
+                                <div class="layer">
+                                    <h4>margin,padding만으로 <br> instagram로고 만들기</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/7.첫_사이드_헤더.png" alt="">
+                                <div class="layer">
+                                    <h4>사이드헤더_만든날</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/8.현대카드_사이드헤더_버전.png" alt="">
+                                <div class="layer">
+                                    <h4>현대카드 <br> 홈페이지 <br> 내맘대로 <br> 만들기 <br> ver.side_header</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/9.카드레이아웃_응용버전.png" alt="">
+                                <div class="layer">
+                                    <h4>카드 <br> 레이아웃_ver.3</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-3">
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/10.애니메이션_적용.png" alt="">
+                                <div class="layer">
+                                    <h4>애니메이션_적용</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/11.카드레이아웃_활용2.png" alt="">
+                                <div class="layer">
+                                    <h4>카드 <br> 레이아웃_ver.4</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/12.그래프_배운날.png" alt="">
+                                <div class="layer">
+                                    <h4>그래프_적용</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/13.dropdown2.png" alt="">
+                                <div class="layer">
+                                    <h4>dropdown</h4>
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <div class="layer">
+                                </div>
+                            </div>
+                            <div class="html-img">
+                                <img src="싱글페이지_img/HTML_img/14.tilt_처음_적용한_날.png" alt="">
+                                <div class="layer">
+                                    <h4>tilt_적용</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="html-javascript"></div>
+            
+            <div class="JavaScript">
+                <h1>Made By</h1>
+                <ul>
+                    <li>이름 : <span>이승섭</span></li>
+                    <li>이메일 : <span>zlzm2522@gmail.com</span></li>
+                    <li>사용언어 : <span> My SQL, JAVA, HTML, CSS, JavaScript</span></li>
+                    <li>사는 곳 : <span> 대전광역시</span></li>
+                </ul>
+            </div>
+        </section>
+        <div class="scroll-up" onclick="doUp()">
+            <h3>↑</h3>
+        </div>
+    </div>
+    <script>
+        function doUp() {
+            window.scrollTo({top : 0, behavior:'smooth'})
+        }
+        function goSql() {
+            window.scrollTo({top : 650, behavior : 'smooth'})
+        }
+        function goJava() {
+            window.scrollTo({top : 1400, behavior : 'smooth'})
+        }
+        function goHtlm() {
+            window.scrollTo({top : 2150, behavior : 'smooth'})
+        }
+        function goMadeBy() {
+            window.scrollTo({top : 2250,behavior : 'smooth'})
+        }
+        function setTab1() {
+            document.getElementById('a').style.display = 'block'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab2() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'block'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab3() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'block'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab4() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'block'
+        }
+        // SQL- CHART
+        const DATA_SETTING = {
+            datasets: [{
+                label : 'Level 1',
+                data : [100],
+                backgroundColor: ['white'],
+            },],
+        };
+        const DATA_SETTING2 = {
+            datasets: [{
+                label : 'level 2',
+                data : [100],
+                backgroundColor : ['white'],
+            },],
+        };
+        const DATA_SETTING3 = {
+            datasets: [{
+                label : 'level 3',
+                data : [20,80],
+                backgroundColor : ['grey','white'],
+            },],
+        };
+        const DATA_SETTING4 = {
+            datasets:[{
+                label : 'level 4',
+                data : [100],
+                backgroundColor : ['grey'],
+            },],
+        };
+
+        const MY_CHART_DATA = {
+            type : 'doughnut',
+            data : DATA_SETTING
+        };
+        const MY_CHART_DATA2 = {
+            type : 'doughnut',
+            data : DATA_SETTING2
+        };
+        const MY_CHART_DATA3 = {
+            type : 'doughnut',
+            data : DATA_SETTING3
+        };
+        const MY_CHART_DATA4 = {
+            type : 'doughnut',
+            data : DATA_SETTING4
+        };
+
+        new Chart(document.getElementById('myChart'),MY_CHART_DATA)
+        new Chart(document.getElementById('myChart2'),MY_CHART_DATA2)
+        new Chart(document.getElementById('myChart3'),MY_CHART_DATA3)
+        new Chart(document.getElementById('myChart4'),MY_CHART_DATA4)
+    </script>
+</body>
+</html>
