@@ -267,7 +267,7 @@ header{
     display: none;
 }
 .sql-graph{
-    margin-top: 40px;
+    margin-top: 20px;
     position: relative;
     padding: 2%;
     display: grid;
@@ -290,29 +290,13 @@ header{
 .sql-graph-doughnut p{
     text-align: left;
     width: 60%;
+    font-size: 18px;
+}
+.sql-graph-doughnut p span{
+    font-weight: 800;
 }
 .sql-graph-doughnut .chart{
     border-top: 4px solid orangered;
-}
-.sql-graph-doughnut .percent{
-    position: absolute;
-    left: 11%;
-    bottom: 35%;
-}
-.sql-graph-doughnut .percent-level2{
-    position: absolute;
-    left: 35.5%;
-    bottom: 35%;
-}
-.sql-graph-doughnut .percent-level3{
-    position: absolute;
-    bottom: 35%;
-    right: 36%;
-}
-.sql-graph-doughnut .percent-level4{
-    position: absolute;
-    right: 12%;
-    bottom: 35%;
 }
 .content-Level{
     width: 100%;
