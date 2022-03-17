@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            width: 1200px;
+            height: 400px;
+            display: flex;
+            margin: 50px auto;
+        }
+        .item{
+            flex-basis: 20%;
+            background-color: #777;
+            border: 1px solid black;
+        }
+        button{
+            font-size: 20px;
+            padding: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="createItem()">APPEND</button>
+        <button id="children">children</button>
+        <div class="row">
+            <div class="item" onclick="clickItem(this)">둘레식당</div>
+        </div>
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+     crossorigin="anonymous">
+    </script>
+    <script>
+        // on : 이벤트를 받을 준비.(공학용어 : 바인딩)
+        // 익명 함수: 함수이름이 없는것.
+        // 자바스크립트는 매개변수로 함수가 가능하다.
+        // 자바스크립트는 리턴에 함수를 구현할 수 있다.(자바에서는 안됨) (공학용어 : 클로저)
+        
+        // 많이 사용하는 방법.
+        $('#children').on('click',function(){
+           var len =  $('.row').children().length;
+            console.log(len);
+            //children() 자식 태그 정보 호출
+            // console.log($(".row").children() <==json 확인. 배열위치, 불러오고 싶은 정보 붙여넣기
+        }
+        );
+        console.log($(".row").children())
+
+        // function으로 클릭
+        function createItem() {
+            // 버튼을 1번 클락하면 아이템이 5개가 한번에 만들어짐. 반복은 for문을 먼저 생각하자.
+            // 아이템이 6개 이상이면 append stop!
+            var len = $('.row').children().length;
+            if(len<6){
+                for(var i=0; i<5;i++){
+                    $(".row").append('<div class="item"></div>')
+                }
+            }else{
+                alert('아이템 길이가 6을 넘었습니다.')
+            }
+        }
+        // this
+        function clickItem(value) {
+            console.log(value)
+        }
+
+    </script>
+</body>
+</html>
