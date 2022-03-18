@@ -100,26 +100,30 @@
             $('#myMenu').append(val)
           }
           function doOrder() {
-            var len = $('#myMenu').children().length;
-            if(len < 1){
-              alert('선택해주세요.')
-              return false;
+            var len = $('#myMenu').children().length
+            if(len<1){
+              alert('메뉴를 선택해주세요.')
+              return false
             }
+
             var menu = '';
             for(var i=0; i<len; i++){
               if($('#myMenu').children()[i].innerHTML === '곱창 파스타'){
                 alert($('#myMenu').children()[i].innerHTML+'는 재료가 소진되었습니다.')
                 return false;
               }
-
+              
               if(i == len-1){
                 menu += $('#myMenu').children()[i].innerHTML
                 break;
               }
+
               menu+= $('#myMenu').children()[i].innerHTML+' ,'
             }
+            
             confirm('선택하신 메뉴는 '+menu+'이며 수량은 '+len+'개 입니다.')
           }
+        
           function doClear() {
             window.location.reload();
           }
