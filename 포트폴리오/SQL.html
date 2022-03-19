@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* SQL */
+.sql-container h3{
+    padding: 8px 0 0 0;
+}
+.sql-container .row{
+    display: flex;
+    margin: 10px auto;
+    width: 90%;
+    height: 600px;
+    border: 3px solid black;
+    background-color: antiquewhite;
+}
+.sql-container .item{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    /* background-color: grey; */
+    color: black;
+}
+.sql-container .tab{
+    flex-basis: 25%;
+    border: 3px solid black;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+    background-color: beige;
+}
+.sql-container .tab h2{
+    text-align: center;
+}
+.sql-container .content{
+    flex-basis: 80%;
+    color: black;
+    text-align: center;
+}
+.sql-container #b{
+    display: none;
+}
+.sql-container #c{
+    display: none;
+}
+.sql-container #d{
+    display: none;
+}
+.sql-graph{
+    position: relative;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-gap: 30px;
+}
+.sql-graph-doughnut{
+    background-color: mediumaquamarine;
+    width: 100%;
+    height: auto;
+    padding: 6% 3%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.85);
+}
+.sql-graph-doughnut h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.sql-graph-doughnut p{
+    text-align: left;
+    width: 60%;
+    font-size: 18px;
+}
+.sql-graph-doughnut p span{
+    font-weight: 800;
+}
+.sql-graph-doughnut .chart{
+    border-top: 4px solid orangered;
+}
+.sql-title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+}
+.swiper{
+    width: 33%;
+    height: 300px;
+    margin: 0 auto 0;
+}
+.swiper-slide img{
+    width: 200%;
+    object-fit: cover;
+    margin: 0 auto 0;
+}
+    </style>
+</head>
+<body>
+    <div class="header-sql"></div>
+    <div class="SQL" >
+        <h1>SQL</h1>
+        <div class="sql-container">
+            <div class="row">
+                <div class="item">
+                    <div class="tab" onclick="setTab1()"><h2>SQL 요약</h2></div>
+                    <div class="tab" onclick="setTab2()"><h2>Level 1</h2></div>
+                    <div class="tab" onclick="setTab3()"><h2>Level 2</h2></div>
+                    <div class="tab" onclick="setTab4()"><h2>Level 3</h2></div>
+                </div>
+                <div id="a" class="content">
+                    <div class="sql-title">
+                        <h1>프로그래머스-MySQL</h1>
+                    </div>
+                    <div class="sql-graph">
+                        <div class="sql-graph-doughnut">
+                            <h2>Level 1</h2>
+                            <p>문제수 : <span>10/10</span></p>
+                            <p>달성률 : <span>100%</span></p>
+                            <div class="chart">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="sql-graph-doughnut">
+                            <h2>Level 2</h2>
+                            <p>문제수 : <span>11/11</span></p>
+                            <p>달성률 : <span>100%</span></p>
+                            <div class="chart">
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                        </div>
+                        <div class="sql-graph-doughnut">
+                            <h2>Level 3</h2>
+                            <p>문제수 : <span>4/5</span></p>
+                            <p>달성률 : <span>80%</span></p>
+                            <div class="chart">
+                                <canvas id="myChart3"></canvas>
+                            </div>
+                        </div>
+                        <div class="sql-graph-doughnut">
+                            <h2>Level 4</h2>
+                            <p>문제수 : <span>0/3</span></p>
+                            <p>달성률 : <span>0%</span></p>
+                            <div class="chart">
+                                <canvas id="myChart4"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="b" class="content">
+                    <div class="Level1-title">
+                        <h1>Level 1</h1>
+                    </div>
+                    <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_1/모든 레코드 조회하기 - 수정본.png" alt=""></div>
+      <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_1/이름이 없는 동물의 아이디-수정본.png" alt=""></div>
+      <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_1/이름이 있는 동물의 아이디-수정본.png" alt=""></div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+                <div id="c" class="content">
+                    <div class="Level2-title">
+                        <h1>Level 2</h1>
+                    </div>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_2/NULL 처리하기-수정본.png" alt=""></div>
+                          <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_2/고양이와 개는 몇마리 있을까-수정본.png" alt=""></div>
+                          <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_2/루시와 엘라 찾기-수정본.png" alt=""></div>
+                          ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                      </div>
+                </div>
+                <div id="d" class="content">
+                    <div class="Level-title">
+                        <h1>Level 3</h1>
+                    </div>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_3/없어진 기록 찾기-수정본.png" alt=""></div>
+                          <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_3/오랜 기간 보호한 동물(1)-수정본.png" alt=""></div>
+                          <div class="swiper-slide"><img src="싱글페이지_img/SQL/Level_3/있었는데요 없었습니다-수정본.png" alt=""></div>
+                          ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+        function doUp() {
+            window.scrollTo({top : 0, behavior:'smooth'})
+        }
+        function goSql() {
+            window.scrollTo({top : 650, behavior : 'smooth'})
+        }
+        function goJava() {
+            window.scrollTo({top : 1400, behavior : 'smooth'})
+        }
+        function goHtlm() {
+            window.scrollTo({top : 2150, behavior : 'smooth'})
+        }
+        function goMadeBy() {
+            window.scrollTo({top : 2250,behavior : 'smooth'})
+        }
+        function setTab1() {
+            document.getElementById('a').style.display = 'block'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab2() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'block'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab3() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'block'
+            document.getElementById('d').style.display = 'none'
+        }
+        function setTab4() {
+            document.getElementById('a').style.display = 'none'
+            document.getElementById('b').style.display = 'none'
+            document.getElementById('c').style.display = 'none'
+            document.getElementById('d').style.display = 'block'
+        }
+        // SQL- CHART
+        const DATA_SETTING = {
+            datasets: [{
+                label : 'Level 1',
+                data : [100],
+                backgroundColor: ['white'],
+            },],
+        };
+        const DATA_SETTING2 = {
+            datasets: [{
+                label : 'level 2',
+                data : [100],
+                backgroundColor : ['white'],
+            },],
+        };
+        const DATA_SETTING3 = {
+            datasets: [{
+                label : 'level 3',
+                data : [20,80],
+                backgroundColor : ['grey','white'],
+            },],
+        };
+        const DATA_SETTING4 = {
+            datasets:[{
+                label : 'level 4',
+                data : [100],
+                backgroundColor : ['grey'],
+            },],
+        };
+
+        const MY_CHART_DATA = {
+            type : 'doughnut',
+            data : DATA_SETTING
+        };
+        const MY_CHART_DATA2 = {
+            type : 'doughnut',
+            data : DATA_SETTING2
+        };
+        const MY_CHART_DATA3 = {
+            type : 'doughnut',
+            data : DATA_SETTING3
+        };
+        const MY_CHART_DATA4 = {
+            type : 'doughnut',
+            data : DATA_SETTING4
+        };
+
+        new Chart(document.getElementById('myChart'),MY_CHART_DATA)
+        new Chart(document.getElementById('myChart2'),MY_CHART_DATA2)
+        new Chart(document.getElementById('myChart3'),MY_CHART_DATA3)
+        new Chart(document.getElementById('myChart4'),MY_CHART_DATA4)
+
+        // swiper
+        const swiper = new Swiper('.swiper', {
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+
+        });
+    </script>
+</body>
+</html>
