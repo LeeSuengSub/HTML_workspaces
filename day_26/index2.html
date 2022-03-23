@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- this! -->
+    <div class="member">
+        <p onclick="doClick(1)">강인석</p>
+        <p onclick="doClick(100)">류근환</p>
+        <p onclick="doClick(this)">김준수</p>
+        <p onclick="doClick(this)"><a href="">오승택</a></p>
+        <!-- this: 나자신을 태그안에 넣는다. -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+   </script>
+    <script>
+        function doClick(num) {
+            var htmlText = $(num).css('color','#777');
+            console.log(htmlText)
+            // $('#')=> 아이디
+            // $('.')=> 클래스
+            // $(p=> p태그
+            // $(this)=> this
+            // this는 #이나.을 찍을 필요없다. 오직 나자신만 있기때문에. 변수이름으로 쓸수 없다.
+            // 태그에는 값을 작성하고, function에는 변수이름을 적는다.
+        }
+    </script>
+</body>
+</html>
