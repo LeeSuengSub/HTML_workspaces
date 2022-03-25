@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <input type="text" id="email" placeholder="email을 입력하세요">
+        <input type="text" id="companyNumber" placeholder="사업자등록번호를 입력하세요">
+        <input type="text" id="userName" placeholder="이름을 입력하세요">
+        <!-- input 20개 있다고 가정 -->
+        <button id="btn" type="button">사업 제출</button>
+    </div>
+    <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+   </script>
+   <script>
+       //버튼을 클릭했을 때
+       //이벤트를 처리할 수 있는 방법
+       //1.oncliick <= this를 파라미터로 넘겨줄 때만 활용(선생님)
+       //2.$().on('click',익명함수)
+       //3.$().click(익명함수) 2번이랑 차이가 없다. 회사에 맞게 사용해라
+    //    $('#btn').on('click',function()}{})
+    //    $('#btn').click(() => {})//버전6 (arrow function)
+    $('#btn').click(function(){//버전5
+        console.log('hello world')
+        //for문을 완성 => console.log로 id를 출력할 것.
+        var len = $('.form').children().length
+        var formChildren = $('.form').children()
+        for(var i=0; i<len; i++){
+            var value = $('#'+formChildren[i].id).val()
+
+            if(value ===''){
+                console.log('input값을 입력해주세요.')
+            }
+            if(formChildren[i].id === 'email' && !doCheckEmail(value)){
+                console.log('이메일 형식이 질못되었습니다.')
+                return false
+                // if(isEmail===true) <= 초짝티낸다.
+            }
+            if(formChildren[i].id === 'companyNumber' && !doCheckCompanyNumber(value)){
+                console.log('사업자등록번호가 잘못되었습니다.')
+                return false
+            }
+        }
+        //input을 체크하는 로직 구현예정
+    })
+    //이메일을 확인하다.
+    //자바스크립트 함수 특징: 리턴값 지정 X
+    function doCheckEmail(email){
+        // 이메일 체크하는 정규표현식
+        var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+        var isEmail=regEmail.test(email);//test라는 내장함수가 자바스크립트 존재
+        return isEmail;
+    }
+
+    //사업자등록번호를 확인하다.
+    function doCheckCompanyNumber(CompanyNumber){
+        // 사업자등록번호
+        //314 86 37230
+        var regCompanyNumber = /([0-9]{3})-?([0-9]{2})-?([0-9]{5})/
+        var isCompanyNumber = regCompanyNumber.test(CompanyNumber);
+        return isCompanyNumber
+    }
+
+    function submitData(){
+        //data => json
+        //json=> server(백엔드에 전송)
+        //jquery ajax를 이용해서 json=> server(백엔드에 전송)
+        var jsonData = {};
+        jsonData.email = $('#email').val();
+        jsonData.CompanyNumber = $('#CompanyNumber').val();
+        jsonData.userName = $('#userName').val();
+        console.log(jsonData)
+    }
+
+    //자바스크립트 함수 특징:
+    //1. 리턴타입 정의 X
+    //2. 호출할 때 파라미터값 option\
+    //      파라미터에 데이터 타입 정의 X
+    //3. 파라미터에 함수 허용!
+    //***(1-2년차)4.return에 함수가 가능(클로저)  
+   </script>
+</body>
+</html>
