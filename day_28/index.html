@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text-wrapper">
+        <input id="참이슬" type="text" value="">
+        <input id="대선" type="text" value="대선">
+        <input id="여수밤바다" type="text" value="">
+        <input id="한라산" type="text" value="한라산">
+        <input id="린" type="text" value="린">
+    </div>
+    <button>click</button>
+    <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+   </script>
+   <script>
+       //클릭을 했을 때 input value를 가져옴.(조건, 공백제거)
+        //공백을 제거하는 방법. 1. trim(),replace()
+        
+        //1. 요소(input)에 id 지정
+        //단점, input이 많아지면 코드도 길어진다.
+        // $('#참이슬');
+        var name = '참이슬'
+        //제이쿼리에 모든 함수는 return값이 존재
+        var result = $('#'+name)
+        .val()//value의 리턴이 trim으로 이동. trim에서 result로 리턴해줌.
+        .trim();//메소드 체이닝
+        console.log(result)
+
+        //2. 부모와 자식을 이용한다.
+        //text-wrapper의 자식정보가 변수에 대입
+        var textWrapperChildren = $('.text-wrapper').children()//return 배열
+        console.log(textWrapperChildren)//children을 이용해서 자식정보를 상세히 알수 있음.
+        //리턴 === 반복문(while, for, each)
+        for(var i=0; i < textWrapperChildren.length; i++){
+            //value 가져옴. how?
+            var id = textWrapperChildren[i].id//코드의 중복을 막기 위해 children을 활용한다.
+            console.log(id)
+            var value = $('#'+id)
+            .val()
+            .trim()
+            if(value == ''){
+                $('#'+id).focus()
+                console.log('필수 입력란을 작성해주세요.')
+            }
+            // .replace(/ /g,'')
+            console.log(value)//모든 공백제거
+        }
+   </script>
+</body>
+</html>
