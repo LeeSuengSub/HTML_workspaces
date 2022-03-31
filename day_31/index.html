@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="my-github">
+      <h3 class="name"></h3>
+      <p class="followers"></p>
+      <p class="following"></p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>login</th>
+          <th>visibility</th>
+          <th>created_at</th>
+        </tr>
+      </thead>
+      <tbody id="list">
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
+      </tbody>
+    </table>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // 전송!~ (동기 전송, 비동기 전송)
+      //ajax default value : 비동기 전송
+      //ajax(비동기 전송)는 요청보내놓고 다른 행동(function)을 해도 상관이 없다.
+      $.ajax({
+        url: 'https://api.github.com/users/LeeSuengSub',
+        type: 'GET', //데이터 조회
+        dataType: 'json', //서버에서 오는 데이터 타입 정의
+
+        success: (data) => {
+          console.log(data);
+          console.log('팔로잉 => ' + data.following);
+          console.log('팔로워 => ' + data.followers);
+
+          $('.followers').append(data.followers);
+          $('.following').append(data.following);
+          $('.name').append(data.login);
+        },
+        error: function (request, status, error) {
+          //서버요청에 실패하면!
+          console.log(request);
+          if (request.status == 404) {
+            alert('없는 주소 입니다!');
+          }
+        },
+      }); //ajax 선언
+      $.ajax({
+        url: 'https://api.github.com/users/LeeSuengSub/repos', //목적지 주소
+        type: 'GET',
+        dataType: 'json',
+
+        success: (data1) => {
+          console.log(data1);
+
+          for (var i = 0; i < data1.length; i++) {
+            var dataTable =
+              '<tr><td>' +
+              data1[i].id +
+              '</td> <td>' +
+              data1[i].name +
+              '</td> <td>' +
+              data1[i].visibility +
+              '</td> <td>' +
+              data1[i].created_at +
+              '</td></tr>';
+            $('#list').append(dataTable);
+          }
+        },
+        error: function (request, status, error) {
+          console.log(request);
+        },
+      });
+    </script>
+  </body>
+</html>
