@@ -16,37 +16,37 @@
           attendance : 관객수 */
       const movies = [
         {
-          name: "명량",
+          name: '명량',
           rank: 1,
-          createdAt: "2014-07-30",
+          createdAt: '2014-07-30',
           salesRevenue: 135748398910,
           attendance: 17613682,
         },
         {
-          name: "극한직업",
+          name: '극한직업',
           rank: 2,
-          createdAt: "2019-01-23",
+          createdAt: '2019-01-23',
           salesRevenue: 139647979516,
           attendance: 16264944,
         },
         {
-          name: "신과함께-죄와 벌",
+          name: '신과함께-죄와 벌',
           rank: 3,
-          createdAt: "2014-07-30",
+          createdAt: '2014-07-30',
           salesRevenue: 135748398910,
           attendance: 17613682,
         },
         {
-          name: "국제시장",
+          name: '국제시장',
           rank: 4,
-          createdAt: "2014-07-30",
+          createdAt: '2014-07-30',
           salesRevenue: 110913469630,
           attendance: 14257115,
         },
         {
-          name: "어벤져스: 엔드게임",
+          name: '어벤져스: 엔드게임',
           rank: 5,
-          createdAt: "2019-04-24",
+          createdAt: '2019-04-24',
           salesRevenue: 122182694160,
           attendance: 13934592,
         },
@@ -70,23 +70,23 @@
       console.log(movies);
       //1번문제
       for (var i = 0; i < movies.length; i++) {
-        console.log("1번문제 =>" + movies[i].rank);
-        console.log("1번문제 =>" + movies[i].name);
-        console.log("1번문제 =>" + movies[i].createdAt);
-        console.log(" ");
+        console.log('1번문제 =>' + movies[i].rank);
+        console.log('1번문제 =>' + movies[i].name);
+        console.log('1번문제 =>' + movies[i].createdAt);
+        console.log(' ');
         // 2번 문제.
         if (
-          movies[i].name == "명량" ||
-          movies[i].name == "어벤져스: 엔드게임"
+          movies[i].name == '명량' ||
+          movies[i].name == '어벤져스: 엔드게임'
         ) {
           sum = sum + movies[i].salesRevenue;
         }
         //3번 문제.
         if (movies[i].attendance >= 15000000) {
-          console.log("3번문제 =>" + movies[i].name);
-          console.log("3번문제 =>" + movies[i].createdAt);
-          console.log("3번문제 =>" + movies[i].salesRevenue);
-          console.log(" ");
+          console.log('3번문제 =>' + movies[i].name);
+          console.log('3번문제 =>' + movies[i].createdAt);
+          console.log('3번문제 =>' + movies[i].salesRevenue);
+          console.log(' ');
         }
         //4번문제.
         salesum += movies[i].salesRevenue;
@@ -103,12 +103,12 @@
           }
         }
       }
-      console.log("2번====> " + sum);
-      console.log(" ");
-      console.log("4번====> " + avg);
-      console.log(" ");
-      console.log("5번문제====> " + movies[4].name);
-      console.log("5번문제====> " + movies[4].createdAt);
+      console.log('2번====> ' + sum);
+      console.log(' ');
+      console.log('4번====> ' + avg);
+      console.log(' ');
+      console.log('5번문제====> ' + movies[4].name);
+      console.log('5번문제====> ' + movies[4].createdAt);
 
       //5번. 선생님 식(getTime)사용
       var max = 0;
@@ -120,9 +120,9 @@
           temp = i;
         }
       }
-      console.log("영화 이름 : " + movies[temp].name);
-      console.log("개봉 날짜 : " + movies[temp].createdAt);
-      console.log("누적 관객 순위 : " + movies[temp].rank);
+      console.log('영화 이름 : ' + movies[temp].name);
+      console.log('개봉 날짜 : ' + movies[temp].createdAt);
+      console.log('누적 관객 순위 : ' + movies[temp].rank);
 
       var result = 0;
       var max = 0;
