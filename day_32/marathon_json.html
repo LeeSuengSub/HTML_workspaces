@@ -88,6 +88,7 @@
       console.log('하프 마라톤에 참가한 인원수는 ' + count);
 
       //1번 문제(선생님_식) half marathon에 참여한 참가자는 총 몇 명인지 구하고 출력하시오.
+      console.log('1번문제_선생님_딥안');
       var cnt = 0;
       for (var i = 0; i < marathonList.length; i++) {
         if (marathonList[i].type === 'half marathon') ++cnt;
@@ -103,7 +104,8 @@
           console.log('완주하지 못한 참가자의 등번호: ' + marathonList[i].no);
         }
       }
-      //2번 문제(선생님_식)
+      //2번 문제(선생님_식) 완주하지 못한 참가자의 이름과 등번호를 출력하시오.
+      console.log('2번문제_선생님_답안');
       for (var i = 0; i < marathonList.length; i++) {
         if (!marathonList[i].isComplete) {
           console.log(marathonList[i].participant);
@@ -120,7 +122,8 @@
           console.log(marathonList[i].no);
         }
       }
-      //3번 문제(선생님_식)
+      //3번 문제(선생님_식) 완주는 했는데 기록이 없는 참가자의 이름과 등번호를 출력하시오.
+      console.log('3번문제_선생님_답안');
       for (var i = 0; i < marathonList.length; i++) {
         if (marathonList[i].isComplete && marathonList[i].records === 'null') {
           console.log(marathonList[i].participant);
@@ -145,21 +148,30 @@
       }
       console.log(marathonList[temp].no);
       console.log(marathonList[temp].participant);
-      //4번 문제(선생님_식)
+
+      //4번 문제(선생님_식) 완주한 사람 중 가장 기록이 좋은 참가자의 이름과 등번호를 출력하시오.
+      //(마라톤 시작 시간은 '2022-04-01 13:00:00' 입니다.)
+      console.log('4번문제_선생님_답안');
       var marathonStartTime = new Date('2022-04-01 13:00:00').getTime();
       var min = 0;
+      var result = 0;
+      var cnut = 0;
       for (var i = 0; i < marathonList.length; i++) {
         if (marathonList[i].records !== 'null') {
           var participantTime = new Date(marathonList[i].records).getTime();
           var diffTime = marathonStartTime - participantTime;
-          if (i === 0) min = diffTime;
+          // if(i ===0) // 배열0번째
+          if (cnut === 0) {
+            min = diffTime;
+          }
+          ++cnut;
           if (min > diffTime) {
             min = participantTime; //min은 이제 최소 시간임.
-            temp = i; //몇번째에 교환이 되었는지 확인
+            result = i; //몇번째에 교환이 되었는지 확인
           }
         }
       }
-      console.log(marathonList[temp]);
+      console.log(marathonList[result]);
 
       //5번문제.
       console.log(' ');
@@ -178,12 +190,27 @@
         avg = avg / (1000 * 60);
       }
       console.log(avg);
-
+      //5번 문제(선생님_식) 5. 완주한 사람들의 평균 기록을 구하고 출력하시오.
+      // (단, 기록이 null인 사람은 제외)
+      var marathonStartTime = new Date('2022-04-01 13:00:00').getTime();
+      var totalTime = 0; //기록이 null이 아니고 완주한 사람시간 총 합
+      var cnt = 0; //기록이 null이 아니고 완주한 사람 카운트
+      for (var i = 0; i < marathonList.length; i++) {
+        if (marathonList[i].records !== 'null') {
+          var participantTime = new Date(marathonList[i].records).getTime();
+          var diffMinute = (participantTime - marathonStartTime) / (1000 * 60);
+          totalTime += diffMinute;
+          ++cnt;
+        }
+      }
+      console.log('5번문제_선생님_답안');
+      console.log(totalTime / cnt);
       //for-each사용
 
-      //2번 문제.
+      //2번 문제. 완주하지 못한 참가자의 이름과 등번호를 출력하시오.
       console.log(' ');
       console.log('2번문제 for-each');
+
       marathonList.forEach((element) => {
         if (!element.isComplete) {
           console.log(
@@ -191,9 +218,10 @@
           );
         }
       });
-      //3번 문제.
+      //3번 문제. 완주는 했는데 기록이 없는 참가자의 이름과 등번호를 출력하시오.
       console.log(' ');
       console.log('3번문제 for-each');
+
       marathonList.forEach((element1) => {
         if (element1.isComplete && element1.records === 'null') {
           console.log(
@@ -201,6 +229,23 @@
           );
         }
       });
+
+      //5번문제.5. 완주한 사람들의 평균 기록을 구하고 출력하시오. (단, 기록이 null인 사람은 제외)
+      console.log(' ');
+      console.log('5번문제 for-each');
+
+      var result5 = 0;
+      var sum = 0;
+      var avg = 0;
+      marathonList.forEach((item) => {
+        if (item.isComplete && item.records !== 'null') {
+          var time = new Date(item.records).getTime();
+          ++result5;
+          sum += time - lap;
+        }
+        avg = sum / result5 / (1000 * 60);
+      });
+      console.log(avg);
     </script>
   </body>
 </html>
