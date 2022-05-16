@@ -138,10 +138,10 @@
           dataType: 'json',
           success: function (response) {
             console.log(response);
-            response = 0;
+            // response = 0;
             if (response > 0) {
               location.reload();
-            }else{
+            } else {
               alert('삭제가 되지 않았습니다.');
               //삭제를 했지만 아무일도 일어나지 않았을 때 멘트가 나온다.
             }
@@ -153,43 +153,43 @@
     //사원 추가
     $('#btn').click(function () {
       let jsondate = {
-    "empno" : 8080,
-    "ename" : "이승섭",
-    "job" : "KING",
-    "deptno" : 40
-    };
-    $.ajax({
-          url: 'http://localhost:8080/emp',
-          type: 'POST',
-          contentType : "application/json", // contentType : 보낼때 : json으로
-          dataType: 'json', // dataType : return을 json으로
-          data : JSON.stringify(jsondate), // JSON.stringify을 안해주면 jsondata를 문자로 인식함
-          success: function (response) {
-            console.log(response);
-            location.reload();
-          },
-        });
+        empno: 8080,
+        ename: '이승섭',
+        job: 'KING',
+        deptno: 40,
+      };
+      $.ajax({
+        url: 'http://localhost:8080/emp',
+        type: 'POST',
+        contentType: 'application/json', // contentType : 보낼때 : json으로
+        dataType: 'json', // dataType : return을 json으로
+        data: JSON.stringify(jsondate), // JSON.stringify을 안해주면 jsondata를 문자로 인식함
+        success: function (response) {
+          console.log(response);
+          location.reload();
+        },
+      });
 
-    // alert("버튼 클릭!")
+      // alert("버튼 클릭!")
     });
     //사원 수정
-    $('#btn-update').click(function(){
+    $('#btn-update').click(function () {
       let jsondata = {
-        "job" : "MANAGER",
-        "sal" : 5000
+        job: 'MANAGER',
+        sal: 5000,
       };
       let empno = 7902;
       $.ajax({
-          url: 'http://localhost:8080/api/v1/emp/'+empno, //url : controller의 주소
-          type: 'PATCH', //type : HTTP 메소드(GET, DELETE, POST, PATCH)
-          contentType : "application/json", // contentType : 서버에게 json으로 요청하낟,
-          dataType: 'json', // dataType : 서버의 결과를 json으로 응답받는다.
-          data : JSON.stringify(jsondata), // JSON.stringify을 안해주면 jsondata를 문자로 인식함
-          success: function (response) {
-            console.log(response);
-            location.reload();
-          },
-        });
+        url: 'http://localhost:8080/api/v1/emp/' + empno, //url : controller의 주소
+        type: 'PATCH', //type : HTTP 메소드(GET, DELETE, POST, PATCH)
+        contentType: 'application/json', // contentType : 서버에게 json으로 요청하낟,
+        dataType: 'json', // dataType : 서버의 결과를 json으로 응답받는다.
+        data: JSON.stringify(jsondata), // JSON.stringify을 안해주면 jsondata를 문자로 인식함
+        success: function (response) {
+          console.log(response);
+          location.reload();
+        },
+      });
     });
   </script>
 </html>
