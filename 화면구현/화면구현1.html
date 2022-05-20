@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        text-align: center;
+      }
+      h2 {
+        padding: 50px;
+      }
+      .input {
+        display: flex;
+        flex-direction: column;
+        border: 3px solid;
+        padding: 20px;
+        margin: 10px 300px;
+      }
+      input {
+        padding: 10px;
+        margin: 10px;
+      }
+      select {
+        margin: 10px;
+      }
+      button {
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>회원가입하기</h2>
+      <div class="input">
+        <input type="text" placeholder="*아이디 입력" />
+        <input type="password" placeholder="*비밀번호 입력" />
+        <input type="password" placeholder="*비밀번호 재입력" />
+        <input type="text" placeholder="*성명" />
+        <select name="" id="">
+          <option value="">성별을 선택해주세요</option>
+          <option value="">남성</option>
+          <option value="">여성</option>
+        </select>
+        <input type="number" placeholder="전호번호 입력 Ex) 000-0000-0000" />
+        <!-- <div class="email"> -->
+        <input type="email" placeholder="이메일 입력" />
+        <select name="" id="">
+          <option value="">이메일을 선택해주세요.</option>
+          <option value="">@naver.com</option>
+          <option value="">@gmail.com</option>
+        </select>
+        <!-- </div> -->
+        <button>가입하기</button>
+      </div>
+    </div>
+  </body>
+</html>

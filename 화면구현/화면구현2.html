@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 50px;
+      }
+      .row {
+        margin: 50px 200px;
+        border: 3px solid;
+      }
+      .input {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      input {
+        padding: 10px;
+        margin: 10px;
+      }
+      button {
+        padding: 20px;
+        margin: 20px;
+      }
+      h3 {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h2>펜션 예약하기</h2>
+        <div class="input">
+          <input type="text" placeholder="*성명" />
+          <input type="number" placeholder="*전화번호" />
+          <input type="nubmer" placeholder="*객실번호" />
+          <input type="number" placeholder="*인원수" />
+          <h3>입실날짜- 퇴실날짜</h3>
+          <input type="date" />
+          <input type="date" />
+          <h3>객실 단가</h3>
+          <input type="number" />
+          <h3>총 금액</h3>
+          <input type="number" />
+        </div>
+        <div class="button">
+          <button>예약하기</button>
+          <button>취소하기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
