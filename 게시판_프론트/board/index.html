@@ -91,7 +91,11 @@
         <!-- search -->
         <div class="search">
           <label>
-            <input type="text" placeholder="작성자를 검색하세요..." />
+            <input
+              type="text"
+              id="searchBar"
+              placeholder="작성자를 검색하세요..."
+            />
           </label>
         </div>
         <div>
@@ -297,25 +301,62 @@
           let list = '';
           if (data.length > 0) {
             for (let i = 0; i < data.length; i++) {
-              //아래 조회수 로직 구현 예정
-
               //var 조회수 = data[i].조회수;
-              list +=
-                '<tr onclick=getBoard(' +
-                data[i].boardId +
-                ') ><td>' +
-                data[i].boardId +
-                '</td><td>' +
-                data[i].students_name +
-                '</td><td>' +
-                data[i].title +
-                '</td><td>' +
-                data[i].updateAt +
-                '</td><td>' +
-                data[i].createAt +
-                '</td><td><span class=row>' +
-                0 +
-                '</span></td></tr>';
+              var views = data[i].cnt;
+              if (views < 10) {
+                list +=
+                  '<tr onclick=getBoard(' +
+                  data[i].boardId +
+                  ') ><td>' +
+                  data[i].boardId +
+                  '</td><td>' +
+                  data[i].students_name +
+                  '</td><td>' +
+                  data[i].title +
+                  '</td><td>' +
+                  data[i].updateAt +
+                  '</td><td>' +
+                  data[i].createAt +
+                  '</td><td><span class=row>' +
+                  data[i].cnt +
+                  '</span></td></tr>';
+              }
+              if (views >= 10 && views < 20) {
+                list +=
+                  '<tr onclick=getBoard(' +
+                  data[i].boardId +
+                  ') ><td>' +
+                  data[i].boardId +
+                  '</td><td>' +
+                  data[i].students_name +
+                  '</td><td>' +
+                  data[i].title +
+                  '</td><td>' +
+                  data[i].updateAt +
+                  '</td><td>' +
+                  data[i].createAt +
+                  '</td><td><span class=middle>' +
+                  data[i].cnt +
+                  '</span></td></tr>';
+              }
+              if (views >= 20) {
+                list +=
+                  '<tr onclick=getBoard(' +
+                  data[i].boardId +
+                  ') ><td>' +
+                  data[i].boardId +
+                  '</td><td>' +
+                  data[i].students_name +
+                  '</td><td>' +
+                  data[i].title +
+                  '</td><td>' +
+                  data[i].updateAt +
+                  '</td><td>' +
+                  data[i].createAt +
+                  '</td><td><span class=high>' +
+                  data[i].cnt +
+                  '</span></td></tr>';
+              }
             }
           } else {
             list +=
@@ -345,6 +386,7 @@
           $('#upt-title').val(response.title);
           $('#upt-content').val(response.content);
           $('#boardIdHidden').val(boardId);
+          setBoardViews(boardId); //조회수 함수
         },
       });
     }
@@ -399,6 +441,114 @@
           }
         },
       });
+    });
+
+    // 게시판 조회수 증감 함수
+    function setBoardViews(boardId) {
+      $.ajax({
+        url: 'http://localhost:8080/api/v1/board/views/boardId/' + boardId,
+        type: 'PATCH',
+        dataType: 'json',
+        success: (response) => {
+          if (response > 0) {
+            $('tbody').children().remove();
+            getBoardList();
+          }
+        },
+      });
+    }
+
+    //1. keyup : 누른 키보드 땔 때
+    //2. keypress : 키보드를 계속 누를 때
+    //3. keydown : 키보드를 누를 때
+    $('#searchBar').keyup(function (key) {
+      //엔터를 누를 때 'hello World'를 출력하고 싶음
+      //13은 엔터를 의미
+      if (key.keyCode == 13) {
+        //1. input값을 가져옴.
+        var search = $('#searchBar').val(); //input에 작성한 작성자를 가져옴.
+        if (search.length < 2) {
+          alert('2자 이상 입력하시오');
+          return 0;
+        }
+        console.log(search);
+        //2. AJAX 호출
+        $.ajax({
+          url: 'http://localhost:8080/api/v1/board/search?writer=' + search,
+          type: 'Get',
+          dataType: 'json',
+          success: (data) => {
+            console.log(data);
+            let list = '';
+            if (data.length > 0) {
+              for (let i = 0; i < data.length; i++) {
+                //아래 조회수 로직 구현 예정
+                //var 조회수 = data[i].조회수;
+                var views = data[i].cnt;
+                if (views < 10) {
+                  list +=
+                    '<tr onclick=getBoard(' +
+                    data[i].boardId +
+                    ') ><td>' +
+                    data[i].boardId +
+                    '</td><td>' +
+                    data[i].students_name +
+                    '</td><td>' +
+                    data[i].title +
+                    '</td><td>' +
+                    data[i].updateAt +
+                    '</td><td>' +
+                    data[i].createAt +
+                    '</td><td><span class=row>' +
+                    data[i].cnt +
+                    '</span></td></tr>';
+                }
+                if (views >= 10 && views < 20) {
+                  list +=
+                    '<tr onclick=getBoard(' +
+                    data[i].boardId +
+                    ') ><td>' +
+                    data[i].boardId +
+                    '</td><td>' +
+                    data[i].students_name +
+                    '</td><td>' +
+                    data[i].title +
+                    '</td><td>' +
+                    data[i].updateAt +
+                    '</td><td>' +
+                    data[i].createAt +
+                    '</td><td><span class=middle>' +
+                    data[i].cnt +
+                    '</span></td></tr>';
+                }
+                if (views >= 20) {
+                  list +=
+                    '<tr onclick=getBoard(' +
+                    data[i].boardId +
+                    ') ><td>' +
+                    data[i].boardId +
+                    '</td><td>' +
+                    data[i].students_name +
+                    '</td><td>' +
+                    data[i].title +
+                    '</td><td>' +
+                    data[i].updateAt +
+                    '</td><td>' +
+                    data[i].createAt +
+                    '</td><td><span class=high>' +
+                    data[i].cnt +
+                    '</span></td></tr>';
+                }
+              }
+            } else {
+              list +=
+                '<tr><td colspan=6 style="text-align:center">게시글이 없습니다.</td></tr>'; // colspan이 핵심
+            }
+            $('tbody').children().remove();
+            $('tbody').append(list);
+          },
+        });
+      }
     });
   </script>
 </html>
