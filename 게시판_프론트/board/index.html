@@ -280,7 +280,6 @@
             //내가 작성한 글 지우기
             $('#title').val('');
             $('#content').val('');
-
             $('tbody').children().remove();
             getBoardList();
           }
@@ -467,10 +466,10 @@
       if (key.keyCode == 13) {
         //1. input값을 가져옴.
         var search = $('#searchBar').val(); //input에 작성한 작성자를 가져옴.
-        if (search.length < 2) {
-          alert('2자 이상 입력하시오');
-          return 0;
-        }
+        // if (search.length < 2) {
+        //   alert('2자 이상 입력하시오');
+        //   return 0;
+        // }
         console.log(search);
         //2. AJAX 호출
         $.ajax({
