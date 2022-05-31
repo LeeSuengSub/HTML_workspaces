@@ -106,7 +106,7 @@
       <div class="cardBox">
         <div class="card">
           <div>
-            <div class="numbers">1,400</div>
+            <div class="numbers" id="studentsCnt">1,400</div>
             <div class="cardName">학생 수</div>
           </div>
           <div class="iconBx">
@@ -115,7 +115,7 @@
         </div>
         <div class="card">
           <div>
-            <div class="numbers">500</div>
+            <div class="numbers" id="boardCnt">500</div>
             <div class="cardName">게시글 수</div>
           </div>
           <div class="iconBx">
@@ -124,7 +124,7 @@
         </div>
         <div class="card">
           <div>
-            <div class="numbers">300</div>
+            <div class="numbers" id="writerCnt">300</div>
             <div class="cardName">작성자 수</div>
           </div>
           <div class="iconBx">
@@ -133,7 +133,7 @@
         </div>
         <div class="card">
           <div>
-            <div class="numbers">2,800</div>
+            <div class="numbers" id="viewsCnt">2,800</div>
             <div class="cardName">총 조회 수</div>
           </div>
           <div class="iconBx">
@@ -289,6 +289,24 @@
   </script>
   <script>
     getBoardList();
+    getBoardStatistics();
+
+    function getBoardStatistics() {
+      $.ajax({
+        url: 'http://localhost:8080/api/v1/board/Statistics',
+        type: 'Get',
+        dataType: 'json',
+        success: (data) => {
+          // text() or html() input을 제회한 태그를 컨트롤할 때 사용.
+          //val()은 input 컨트롤할 때 사용.
+          console.log(data);
+          $('#boardCnt').text(data.boardCnt);
+          $('#studentsCnt').text(data.studentsCnt);
+          $('#writerCnt').text(data.writerCnt);
+          $('#viewsCnt').text(data.viewsCnt);
+        },
+      });
+    }
 
     function getBoardList() {
       $.ajax({
