@@ -9,6 +9,31 @@
   </head>
   <body>
     <div class="container">
+      <!-- 글 작성 팝업 -->
+      <div class="write-popup">
+        <div class="editor">
+          <div class="input-box">
+            <label for="studentsName">작성자 : </label>
+            <input id="studentsName" type="text" value="현상원" readonly />
+          </div>
+          <div class="input-box">
+            <label for="title">제목 : </label>
+            <input id="title" type="text" placeholder="제목을 입력하세요..." />
+          </div>
+          <div class="input-box">
+            <textarea
+              id="content"
+              rows="10"
+              cols="65"
+              placeholder="내용을 간단히 적어주세요..."
+            ></textarea>
+          </div>
+          <div class="btn-area">
+            <a href="#" class="btn-cancel">취소</a>
+            <a id="contentSubmit" href="#" class="btn-success">등록</a>
+          </div>
+        </div>
+      </div>
       <!-- 글 작성 수정 -->
       <div class="update-popup">
         <div class="editor">
@@ -195,13 +220,13 @@
             </tbody>
           </table>
           <div class="pagination">
-            <a href="#">Previous</a>
+            <!-- <a href="#">Previous</a>
             <a href="#">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
-            <a href="#">Next</a>
+            <a href="#">Next</a> -->
           </div>
         </div>
       </div>
@@ -281,14 +306,14 @@
             $('#title').val('');
             $('#content').val('');
             $('tbody').children().remove();
-            getBoardList();
+            getBoardList(1, 10);
           }
         },
       });
     });
   </script>
   <script>
-    getBoardList();
+    getBoardList(1, 10);
     getBoardStatistics();
 
     function getBoardStatistics() {
@@ -308,78 +333,124 @@
       });
     }
 
-    function getBoardList() {
+    function getBoardList(pageNum, pageSize) {
       $.ajax({
-        url: 'http://localhost:8080/api/v1/board',
-        type: 'Get',
+        url:
+          'http://localhost:8080/api/v1/board?pageNum=' +
+          pageNum +
+          '&pageSize=' +
+          pageSize,
+        type: 'GET',
         dataType: 'json',
-        success: (data) => {
-          console.log(data);
-          let list = '';
-          if (data.length > 0) {
-            for (let i = 0; i < data.length; i++) {
-              //var 조회수 = data[i].조회수;
-              var views = data[i].cnt;
+        success: function (response) {
+          console.log(response);
+          //html append 작성
+          var html = '';
+          var len = response.list.length;
+          if (len > 0) {
+            for (var i = 0; i < len; i++) {
+              var views = response.list[i].cnt;
               if (views < 10) {
-                list +=
+                //crtl + shift + H => 전체 replace
+                html +=
                   '<tr onclick=getBoard(' +
-                  data[i].boardId +
+                  response.list[i].boardId +
                   ') ><td>' +
-                  data[i].boardId +
+                  response.list[i].boardId +
                   '</td><td>' +
-                  data[i].students_name +
+                  response.list[i].students_name +
                   '</td><td>' +
-                  data[i].title +
+                  response.list[i].title +
                   '</td><td>' +
-                  data[i].updateAt +
+                  response.list[i].updateAt +
                   '</td><td>' +
-                  data[i].createAt +
-                  '</td><td><span class=row>' +
-                  data[i].cnt +
+                  response.list[i].createAt +
+                  '</td><td><span class="row">' +
+                  response.list[i].cnt +
                   '</span></td></tr>';
               }
               if (views >= 10 && views < 20) {
-                list +=
+                html +=
                   '<tr onclick=getBoard(' +
-                  data[i].boardId +
+                  response.list[i].boardId +
                   ') ><td>' +
-                  data[i].boardId +
+                  response.list[i].boardId +
                   '</td><td>' +
-                  data[i].students_name +
+                  response.list[i].students_name +
                   '</td><td>' +
-                  data[i].title +
+                  response.list[i].title +
                   '</td><td>' +
-                  data[i].updateAt +
+                  response.list[i].updateAt +
                   '</td><td>' +
-                  data[i].createAt +
-                  '</td><td><span class=middle>' +
-                  data[i].cnt +
+                  response.list[i].createAt +
+                  '</td><td><span class="middle">' +
+                  response.list[i].cnt +
                   '</span></td></tr>';
               }
               if (views >= 20) {
-                list +=
+                html +=
                   '<tr onclick=getBoard(' +
-                  data[i].boardId +
+                  response.list[i].boardId +
                   ') ><td>' +
-                  data[i].boardId +
+                  response.list[i].boardId +
                   '</td><td>' +
-                  data[i].students_name +
+                  response.list[i].students_name +
                   '</td><td>' +
-                  data[i].title +
+                  response.list[i].title +
                   '</td><td>' +
-                  data[i].updateAt +
+                  response.list[i].updateAt +
                   '</td><td>' +
-                  data[i].createAt +
-                  '</td><td><span class=high>' +
-                  data[i].cnt +
+                  response.list[i].createAt +
+                  '</td><td><span class="high">' +
+                  response.list[i].cnt +
                   '</span></td></tr>';
               }
             }
+            //페이징 화면 구현
+            var paginationHtml = '';
+            if (response.hasPreviousPage) {
+              //이전 페이지가 true라면
+              paginationHtml +=
+                '<a onclick="getBoardList(' +
+                (response.pageNum - 1) +
+                ',' +
+                pageSize +
+                ')" href="#">Previous</a>';
+            }
+            for (var i = 0; i < response.navigatepageNums.length; i++) {
+              // 페이지 번호 길이 만큼 for문 실행
+              paginationHtml +=
+                '<a id="pageNum' +
+                response.navigatepageNums[i] +
+                '" onclick="getBoardList(' +
+                response.navigatepageNums[i] +
+                ',' +
+                pageSize +
+                ')" href="#">' +
+                response.navigatepageNums[i] +
+                '</a>';
+            }
+            if (response.hasNextPage) {
+              //다음 페이지가 true라면
+              paginationHtml +=
+                '<a onclick="getBoardList(' +
+                (response.pageNum + 1) +
+                ',' +
+                pageSize +
+                ')" href="#">Next</a>';
+            }
+            $('.pagination').children().remove();
+            $('.pagination').append(paginationHtml);
+
+            //페이지 번호에 맞게 css 수정
+            $('#pageNum' + pageNum).css('backgroundColor', '#287bff');
+            $('#pageNum' + pageNum).css('color', '#fff');
           } else {
-            list +=
+            html +=
               '<tr><td colspan=6 style="text-align:center">게시글이 없습니다.</td></tr>'; // colspan이 핵심
           }
-          $('tbody').append(list);
+          $('tbody').children().remove();
+          $('tbody').append(html);
         },
       });
     }
@@ -453,7 +524,7 @@
           if (response > 0) {
             alert('삭제 완료');
             $('tbody').children().remove();
-            getBoardList();
+            getBoardList(1, 10);
             $('.update-popup').css('display', 'none'); // 게시물 상세 화면 감추기
           }
         },
@@ -469,7 +540,7 @@
         success: (response) => {
           if (response > 0) {
             $('tbody').children().remove();
-            getBoardList();
+            getBoardList(1, 10);
           }
         },
       });
@@ -567,5 +638,7 @@
         });
       }
     });
+    console.log($('#pageNum2').css('color'));
+    console.log($('#studentsCnt').css('color'));
   </script>
 </html>
