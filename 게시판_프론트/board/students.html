@@ -215,22 +215,14 @@
       });
     }
     function getStudents(studentsId) {
-      //1. 화면 none -> block
-      //클릭한 게시물 확인하는 함수
-
-      //boardId html에 hidden 하기
-
       console.log(studentsId);
       $('.update-popup').css('display', 'block');
 
-      //AJAX 작성
-      //2. AJAX를 이용해서 서버와 연결
       $.ajax({
         url: 'http://localhost:8080/api/v1/students/id/' + studentsId,
         type: 'Get',
         dataType: 'json',
         success: (response) => {
-          //3. input에 데이터 set해주기
           $('#studentsId').val(response.studentsId);
           $('#studentsName').val(response.studentsName);
           $('#studentsPassword').val(response.studentsPassword);
@@ -280,6 +272,41 @@
           }
         },
       });
+    });
+    $('#searchBar').keyup((key) => {
+      if (key.keyCode == 13) {
+        let search = $('#searchBar').val();
+        console.log(search);
+        $.ajax({
+          url:
+            'http://localhost:8080/api/v1/students/search?students=' + search,
+          type: 'Get',
+          dataType: 'json',
+          success: (response) => {
+            console.log(response);
+            let list = '';
+            if (response.length > 0) {
+              for (let i = 0; i < response.length; i++) {
+                list +=
+                  '<tr onclick="getStudents(' +
+                  response[i].studentsId +
+                  ')"><td>' +
+                  response[i].studentsId +
+                  '</td><td>' +
+                  response[i].studentsName +
+                  '</td><td>' +
+                  response[i].createAt +
+                  '</td></tr>';
+              }
+            } else {
+              list +=
+                '<tr><td colspan=3 style="text-align:center">게시글이 없습니다.</td></tr>';
+            }
+            $('tbody').children().remove();
+            $('tbody').append(list);
+          },
+        });
+      }
     });
   </script>
 </html>
