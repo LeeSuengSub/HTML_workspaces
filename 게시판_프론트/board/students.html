@@ -75,7 +75,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="index.html">
               <span class="icon"
                 ><ion-icon name="home-outline"></ion-icon
               ></span>
@@ -83,7 +83,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="students.html">
               <span class="icon"
                 ><ion-icon name="person-outline"></ion-icon
               ></span>
@@ -278,6 +278,7 @@
         },
       });
     }
+    //학생정보 불러오기
     function getStudents(studentsId) {
       console.log(studentsId);
       $('.update-popup').css('display', 'block');
@@ -294,48 +295,55 @@
         },
       });
     }
-    $('#contentUpdate').click(function () {
-      let studentsId = $('#boardIdHidden').val();
-      let studentsName = $('#studentsName').val();
-      let studentsPassword = $('#studentsPassword').val();
 
-      let jsondata = {
-        studentsId: studentsId,
-        studentsName: studentsName,
-        studentsPassword: studentsPassword,
-      };
-      $.ajax({
-        url: 'http://localhost:8080/api/v1/students/id/' + studentsId,
-        type: 'PATCH',
-        contentType: 'application/json',
-        dataType: 'json',
-        data: JSON.stringify(jsondata),
-        success: (response) => {
-          if (response > 0) {
-            alert('수정 완료하였습니다.');
-            location.reload();
-            $('.update-popup').css('display', 'none');
-          }
-        },
-      });
+    //학생 정보 수정
+    $('#contentUpdate').click(function () {
+      if (confirm('수정하시겠습니까?')) {
+        let studentsId = $('#boardIdHidden').val();
+        let studentsName = $('#studentsName').val();
+        let studentsPassword = $('#studentsPassword').val();
+
+        let jsondata = {
+          studentsId: studentsId,
+          studentsName: studentsName,
+          studentsPassword: studentsPassword,
+        };
+        $.ajax({
+          url: 'http://localhost:8080/api/v1/students/id/' + studentsId,
+          type: 'PATCH',
+          contentType: 'application/json',
+          dataType: 'json',
+          data: JSON.stringify(jsondata),
+          success: (response) => {
+            if (response > 0) {
+              alert('수정 완료하였습니다.');
+              location.reload();
+              $('.update-popup').css('display', 'none');
+            }
+          },
+        });
+      }
     });
 
+    //학생 삭제(탈퇴)
     $('#contentDelete').click(function () {
-      let studentsId = $('#boardIdHidden').val();
+      if (confirm('정말 탈퇴하시겠습니까?')) {
+        let studentsId = $('#boardIdHidden').val();
 
-      $.ajax({
-        url: 'http://localhost:8080/api/v1/students/id/' + studentsId,
-        type: 'DELETE',
-        dataType: 'json',
-        success: (response) => {
-          if (response > 0) {
-            alert('삭제하였습니다.');
-            location.reload();
-            getStudentsList(1, 10);
-            $('.update-popup').css('display', 'none'); // 게시물 상세 화면 감추기
-          }
-        },
-      });
+        $.ajax({
+          url: 'http://localhost:8080/api/v1/students/id/' + studentsId,
+          type: 'DELETE',
+          dataType: 'json',
+          success: (response) => {
+            if (response > 0) {
+              alert('삭제하였습니다.');
+              location.reload();
+              getStudentsList(1, 10);
+              $('.update-popup').css('display', 'none'); // 게시물 상세 화면 감추기
+            }
+          },
+        });
+      }
     });
 
     getStudentsSearch(1, 5);
