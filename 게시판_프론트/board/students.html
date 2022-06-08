@@ -352,7 +352,7 @@
       $('#searchBar').keyup((key) => {
         if (key.keyCode == 13) {
           let search = $('#searchBar').val();
-          // console.log(search);
+          console.log(search);
           getStudentsClick(1, 5);
         }
       });
@@ -371,7 +371,7 @@
         type: 'Get',
         dataType: 'json',
         success: (response) => {
-          // console.log(response);
+          console.log(response);
           let html = '';
           if (response.list.length > 0) {
             for (let i = 0; i < response.list.length; i++) {
