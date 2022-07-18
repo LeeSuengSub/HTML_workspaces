@@ -423,3 +423,19 @@ h6 {
         width: 280px;
     }
 }
+span {
+        /* inline-block 명시해줘야 실행(span 태그는) */
+        display: inline-block;
+        animation: wave 3s infinite;
+        animation-delay: calc(0.18s * var(--i));
+      }
+      @keyframes wave {
+        0%,
+        40%,
+        100% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-25px);
+        }
+      }
